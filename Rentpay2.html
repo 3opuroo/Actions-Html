@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style type="text/css">
+          body {
+            font-family: Arial;
+            font-size: 10pt;
+            line-height: 1.25;
+          }
+          img {
+            width: 135px;
+            height: 33px;
+            content: url("https://chatbot.mn/uploads/image/20221020/e445f872a508927e0784968d8fa08fa3.png");
+          }
+          h4 {
+            margin: 0px;
+            padding: 8px;
+          }
+          p {
+            margin: 0px;
+            padding-bottom: 10px;
+          }
+          section {
+            text-align: justify;
+          }
+          span {
+            font-weight: bold;
+          }
+          table {
+            border-collapse: collapse;
+            width: 100%;
+          }
+          table td {
+            border: 1px solid black;
+          }
+          tr td:nth-child(1) {
+            padding: 6px;
+            width: 3%;
+          }
+          tr td:nth-child(2) {
+            padding: 0 6px;
+            width: 45%;
+          }
+          tr td:nth-child(3) {
+            padding: 0 6px;
+          }
+    
+          @media print {
+            .myDiv {
+              break-inside: avoid;
+              position: relative;
+            }
+          }
+    
+          .zC {
+            padding-top: 2.52cm;
+            padding-bottom: 2.22cm;
+            padding-left: 2.27cm;
+            padding-right: 1.9cm;
+          }
+          .zImg {
+            position: absolute;
+            top: 1.5cm;
+            left: 2cm;
+            z-index: 100;
+          }
+          .zFooter {
+            position: absolute;
+            bottom: 1.5cm;
+            left: 2cm;
+            display: flex;
+            justify-content: space-between;
+            width: 82%;
+          }
+          .oC {
+            padding: 1.5cm;
+          }
+          .fC {
+            padding: 2.54cm 2cm;
+          }
+        </style>
+      </head>
+      <body>
+        <!-- Орон сууц хөлслөх гэрээ эхлэл -->
+        <!-- PAGE 1 -->
+        <div class="oC myDiv">
+          <div>
+            <img alt="" />
+          </div>
+          <div>
+            <h4 style="text-align: center; padding-top: 10px; padding-bottom: 30px">
+              ТҮРЭЭСИЙН ГЭРЭЭ
+            </h4>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                padding-bottom: 10px;
+              "
+            >
+              <div>
+                <span>{{cDateY}}</span> оны <span>{{cDateM}}</span> сарын
+                <span>{{cDateD}}</span>-ны өдөр
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp №-Т/
+              </div>
+              <div style="font-weight: bold">Улаанбаатар хот</div>
+            </div>
+          </div>
+          <div style="display: flex; margin-top: 12pt">
+            <!-- LEFT SIDE -->
+            <div style="width: 50%; margin-right: 15px">
+              <section>
+                <p style="text-indent: 4em">
+                  Нэг талаас: <span>{{tureeslegchRD}}</span> регистрийн дугаартай
+                  <span>{{tureeslegchLast}}</span> овогтой
+                  <span>{{tureeslegchFirst}}</span> (цаашид
+                  <span>“Түрээслэгч”</span> гэх)
+                </p>
+                <p style="text-indent: 4em; padding-top: 8pt">
+                  Нөгөө талаас: <span>{{tureesluulegchRD}}</span> регистрийн
+                  дугаартай <span>{{tureesluulegchLast}}</span> овогтой
+                  <span>{{tureesluulegchFirst}}</span> (цаашид
+                  <span>“Түрээслүүлэгч”</span> гэх) нар нь дараах нөхцөлөөр харилцан тохиролцож энэхүү гэрээг байгуулав.
+                </p>
+              </section>
+              <div>
+                <h4 style="text-align: center; padding-bottom: 0px">
+                  НЭГДҮГЭЭР БҮЛЭГ
+                </h4>
+                <h4
+                  style="
+                    text-align: center;
+                    text-transform: capitalize;
+                    padding-top: 2px;
+                    padding-bottom: 8pt;
+                  "
+                >
+                  Гэрээний ерөнхий нөхцөл
+                </h4>
+              </div>
+              <section>
+                <h4 style="text-indent: 15px">Нэг. Гэрээний зорилго</h4>
+                <div style="display: flex">
+                  <div>1.1</div>
+                  <div style="padding-left: 10px">
+                    Энэхүү Гэрээний зорилго нь Түрээслүүлэгч нь энэхүү гэрээний тусгай нөхцөлд заасан үл хөдлөх эд хөрөнгө (цаашид <span>“Талбай”</span> гэх)-ыг түрээслүүлэх, Түрээслэгч нь Түрээслүүлэгчид Түрээсийн төлбөрийг энэхүү гэрээнд заасан журмын дагуу төлөхтэй холбогдсон харилцааг зохицуулахад оршино.
+                  </div>
+                </div>
+              </section>
+              <section>
+                <h4 style="padding-left: 25px; padding-top: 12pt">
+                  Хоёр. Нэр томьёоны тайлбар, тодорхойлолт
+                </h4>
+                <div style="display: flex; padding-top: 8pt">
+                  <div>2.1</div>
+                  <div style="padding-left: 10px">
+                  “Барьцаа” гэж Түрээслэгч Түрээсийн төлбөрийг тогтмол төлөх, энэхүү гэрээний тусгай нөхцөлд заасан эд хөрөнгийн бүрэн бүтэн байдлыг хадгалах үүргийн гүйцэтгэлийг баталгаажуулах зорилгоор Түрээслэгчээс өгсөн мөнгөн хөрөнгийг ойлгоно.
+                  </div>
+                </div>
+                <h4 style="padding-left: 25px; padding-top: 12pt">
+                  Гурав. Гэрээ хугацаа, гэрээний хүчин төгөлдөр байдал
+                </h4>
+                <div style="display: flex; padding-top: 8pt">
+                  <div>3.1</div>
+                  <div style="padding-left: 10px">
+                    Энэхүү гэрээг гэрээний тусгай нөхцөлд заасан хугацаагаар байгуулав.
+                  </div>
+                </div>
+                <div style="display: flex; padding-top: 8pt">
+                <div>3.2</div>
+                <div style="padding-left: 10px">
+                  Гэрээний хугацаа дуусахад Түрээслэгч, Түрээслүүлэгч гэрээг сунгахаар харилцан тохиролцсон бол гэрээний тусгай нөхцөлд нэмэлт өөрчлөлт оруулж хугацааг сунгана.
+                </div>
+              </div>
+              <div style="display: flex; padding-top: 8pt">
+              <div>3.3</div>
+              <div style="padding-left: 10px">
+                Энэхүү гэрээний зарим зүйл, хэсэг, заалтыг Монгол Улсын холбогдох хууль тогтоомжийг зөрчсөн гэх үндэслэлээр шүүхээс хүчин төгөлдөр бусад тооцсон ч гэрээний үлдэх зүйл, хэсэг, заалт хүчин төгөлдөр байна.
+              </div>
+            </div>
+              </section>
+              
+            </div>
+            <!-- RIGHT SIDE -->
+            <div style="width: 50%; margin-left: 15px">
+              <section>
+                <div style="display: flex;">
+                  <div>3.4</div>
+                  <div style="padding-left: 10px">
+                    Талууд энэхүү гэрээний Тусгай нөхцөлийг харилцан нууцлах үүрэгтэй.
+                  </div>
+                </div>
+                <h4 style="padding-left: 25px; padding-top: 12pt">
+                  Дөрөв. Мэдэгдэл ба Баталгаа
+                </h4>
+                <div style="display: flex; margin-top: 8pt">
+                <div>4.1</div>
+                <div style="padding-left: 10px">
+                  Энэхүү гэрээтэй холбоотойгоор Түрээслүүлэгч нь дараах мэдэгдэл ба баталгааг гаргаж байна:
+                </div>
+              </div>
+              </section>
+              <section>
+                <div style="display: flex; margin-top: 10px">
+                  <div style="padding-left: 30px">4.1.1</div>
+                  <div style="padding-left: 10px">
+                    Түрээслүүлэгч нь энэхүү гэрээний Тусгай нөхцөлд заасан Талбайн хууль ёсны өмчлөгч, эсхүл түүний итгэмжлэгдсэн этгээд бөгөөд энэхүү Талбайн өмчлөл болон эзэмшлийн талаар аливаа гуравдагч этгээд шаардлага гаргах эрхгүй;
+                  </div>
+                </div>
+                <div style="display: flex; margin-top: 10px">
+                  <div style="padding-left: 30px">4.1.2</div>
+                  <div style="padding-left: 10px">
+                    Энэхүү гэрээний хугацаанд Түрээслэгчийг Талбайгаас албадан гаргах, эсхүл энэхүү гэрээний хугацаанаас өмнө Түрээсийн харилцааг дуусгавар болохуйц нэхэмжлэл, шаардлагыг аливаа гуравдагч этгээд гаргахгүй бөгөөд ийнхүү гаргаж болзошгүй нөхцөл байдал үүсэх боломжгүй болно;
+                  </div>
+                </div>
+                <div style="display: flex; margin-top: 10px">
+                  <div style="padding-left: 30px">4.1.3</div>
+                  <div style="padding-left: 10px">
+                    Энэхүү гэрээний хугацаанд бий болсон гэнэтийн болон давагдашгүй хүчин зүйл үүссэнээс бусад тохиолдолд Талбай нь чанарын хувьд хэвийн ашиглах, үйлчилгээ эрхлэн явуулах нөхцлийг хангасан болно;
+                  </div>
+                </div>
+              </section>
+              <section>
+              <div style="display: flex; margin-top: 8pt">
+              <div>4.2</div>
+              <div style="padding-left: 10px">
+                Энэхүү гэрээтэй холбоотойгоор Түрээслэгч нь дараах мэдэгдэл ба баталгааг гаргаж байна:
+              </div>
+              </div>
+              <div style="display: flex; margin-top: 10px">
+                <div style="padding-left: 30px">4.2.1</div>
+                <div style="padding-left: 10px">
+                  Энэхүү гэрээний хугацаанд Талбайг гэрээний тусгай нөхцөлд заасан зориулалтын дагуу түрээслэх бөгөөд бусдад дамжуулан түрээслэхгүй;
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 10px">
+                <div style="padding-left: 30px">4.2.2</div>
+                <div style="padding-left: 10px">
+                  Талбайд хууль бус үйл ажиллагаа явуулах, түүнийг өнгөлөх далдлах зорилгоор ашиглахгүй болно;
+                </div>
+              </div>
+            </section>
+            </div>
+          </div>
+          <div
+            style="display: flex; justify-content: space-between; margin-top: 30px"
+          >
+            <div>Түрээслүүлэгч:________________</div>
+            <div>1</div>
+            <div>Түрээслэгч:________________</div>
+          </div>
+        </div>
+        <!-- PAGE 2 -->
+        <div class="oC myDiv">
+            <div><img alt=""/></div>
+            <!-- LEFT SIDE -->
+            <div style="display: flex">
+              <div style="width: 50%; margin-right: 15px">
+                <section>
+                  <div style="display: flex;">
+                    <div style="padding-left: 30px">4.2.3</div>
+                    <div style="padding-left: 10px">
+                      Талбайн дундын ашиглалтын хэсгийг зохих ёсоор, бусдад саад учруулахгүйгээр ашиглана;
+                    </div>
+                  </div>
+                </section>
+                <section>
+                  <div style="display: flex; margin-top: 10pt">
+                    <div>4.3</div>
+                    <div style="padding-left: 10px">
+                      Түрээслэгч болон Түрээслүүлэгч нь дараах мэдэгдэл ба баталгааг гаргаж байна:
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt">
+                    <div style="padding-left: 30px">4.3.1</div>
+                    <div style="padding-left: 10px">
+                      Гэрээний аль нэг тал нь энэхүү зүйлд заасан мэдэгдэл ба баталгааг зөрчсөн, эсхүл энэхүү гэрээнд заасан бусад үүргээ биелүүлээгүйн улмаас нөгөө талд учруулсан аливаа хохирол, зардал, хөрөнгийн элэгдэл, ирээдүйд зайлшгүй олох ёстой орлогыг төлнө;
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt">
+                    <div style="padding-left: 30px">4.3.2</div>
+                    <div style="padding-left: 10px">
+                      Талууд хөрөнгө хүлээлцэх актыг, өөрсдөө үйлдэх ба алдаатай үйлдсэн, эсхүл эд хөрөнгийг хүлээлцэхдээ хайхрамжгүй хандаж Талбай, түүний эд хөрөнгийн чанар муудсаныг тогтооход хүндрэл учирсан, талууд тохиролцоонд хүрч чадаагүй бол хөндлөнгийн байгууллагаар дүгнэлт гаргуулж, түүнтэй холбоотой зардлыг Талууд тэнцүү төлнө;
+                    </div>
+                  </div>
+                </section>
+                <section>
+                <div style="display: flex; margin-top: 10pt">
+                  <div>4.4</div>
+                  <div style="padding-left: 10px">
+                    Түрээслүүлэгч нь энэхүү гэрээний 4.1.1, 4.1.2-т заасан Мэдэгдэл ба баталгааг худал гаргасны улмаас Талбайг үргэлжлүүлэн түрээслэх боломжгүй болсон, эсхүл Түрээсийн гэрээний хугацаа дуусахаас өмнө Түрээслэгч Талбайг суллан өгөх шаардлагатай болсон бол түүнтэй холбогдон гарсан зардал, шинээр Талбай хөлслөхөд гарсан нэмэлт зардлыг Түрээслүүлэгч хариуцна.
+                  </div>
+                </div>
+                <div style="display: flex; margin-top: 10pt">
+                  <div>4.5</div>
+                  <div style="padding-left: 10px">
+                    Түрээслэгч нь энэхүү гэрээний 4.2-т заасан мэдэгдэл ба баталгааг зөрчсөн бол Түрээслүүлэгч энэхүү гэрээг цуцлах эрхтэй бөгөөд гэрээг цуцалсны улмаас Түрээслүүлэгчийн энэхүү гэрээний дагуу зайлшгүй олох ёстой байсан орлогыг барагдуулах үүрэгтэй.
+                  </div>
+                </div>
+              </section>
+              <section>
+              <h4 style="padding-left: 25px; margin-top: 6pt;">
+                Тав. Түрээсийн төлбөр, түүнийг төлөх журам
+              </h4>
+              <div style="display: flex; margin-top: 6pt">
+                <div>5.1</div>
+                <div style="padding-left: 10px">
+                  Түрээсийн төлбөр нь энэхүү гэрээний тусгай нөхцөлд заасан үнийн дүнтэй тэнцүү байх ба сар бүр тусгай нөхцөлд заасан хугацаанд багтаан төлнө.
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 10pt">
+                <div>5.2</div>
+                <div style="padding-left: 10px">
+                  Түрээслэгч нь тусгай нөхцөлд заасан хугацаанд Түрээсийн төлбөрийг төлөөгүй бол ийнхүү хугацаа хэтрүүлсэн хоног тутам төлбөл зохих төлбөрийн дүнгийн <strong>0,3</strong> хувьтай тэнцэх алдангийг төлөх үүрэгтэй.
+                </div>
+              </div>
+            </section>
+              </div>
+              <!-- RIGHT SIDE -->
+              <div style="width: 50%; margin-left: 15px">
+                <section>
+                  <div style="display: flex">
+                    <div>5.3</div>
+                    <div style="padding-left: 10px">
+                      Түрээслэгчийн төлөх ашиглалтын зардлыг талууд харилцан тохиролцож түрээсийн төлбөрөөс ангид тооцоо нийлнэ.
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt">
+                    <div>5.4</div>
+                    <div style="padding-left: 10px">
+                      Түрээслэгч ашиглалтын зардлыг төлөхөөр тохиролцсон бол Түрээслүүлэгч нь талбайн ашиглалтын зардлын тооцооллыг холбогдох тоолуур, баримтыг үндэслэн Түрээслэгчээс сар бүрийн 05-ны өдөрт багтаан өмнөх сарын төлбөрийг нэхэмжилнэ.
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt">
+                  <div>5.5</div>
+                  <div style="padding-left: 10px">
+                    Гэрээний төлбөр төлөх дансны мэдээллийг гэрээний тусгай нөхцөлд заав.
+                  </div>
+                </div>
+                </section>
+                <section>
+                  <h4 style="padding-left: 25px; margin-top: 6pt;">
+                    Зургаа. Барьцаа хөрөнгө, түүнийг захиран зарцуулах журам
+                  </h4>
+                  <div style="display: flex; margin-top: 6pt">
+                    <div>6.1</div>
+                    <div style="padding-left: 10px">
+                      Түрээслэгч нь энэхүү гэрээний тусгай нөхцөлд заасан барьцаа төлбөрийг Түрээслүүлэгчид шилжүүлэх ба Түрээслүүлэгч нь Гэрээний хугацаанд барьцаа төлбөрийг саатуулан барих эрхтэй.
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt">
+                    <div>6.2</div>
+                    <div style="padding-left: 10px">
+                      Дараах тохиолдолд барьцаа хөрөнгийг захиран зарцуулах эрх Түрээслүүлэгчид үүснэ:
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt">
+                  <div style="padding-left: 30px">6.2.1</div>
+                  <div style="padding-left: 10px">
+                    Түрээслэгч нь Түрээсийн төлбөрийг 1 ба түүнээс дээш сар төлөөгүй бол ийнхүү төлөөгүй хугацааны төлбөр болон алдангийн нийлбэрийн хэмжээгээр;
+                  </div>
+                </div>
+                <div style="display: flex; margin-top: 10pt">
+                  <div style="padding-left: 30px">6.2.2</div>
+                  <div style="padding-left: 10px">
+                    Түрээслэгч нь Талбайг энэхүү гэрээний хугацаа дуусах өдөр суллаж өгөөгүй бол ийнхүү суллаж өгөөгүй хоногоор тооцон түрээсийн төлбөр нэхэмжлэх ба гэрээний үнийн дүнгийн <strong>0.3</strong> хувиар алдангийг хоног тутамд тооцно
+                  </div>
+                </div>
+                <div style="display: flex; margin-top: 10pt">
+                  <div style="padding-left: 30px">6.2.3</div>
+                  <div style="padding-left: 10px">
+                    Түрээслэгчийн буруугаас гэрээ цуцлагдсан бол холбогдох зардлыг.
+                  </div>
+                </div>
+                <div style="display: flex; margin-top: 10pt">
+                  <div>6.3</div>
+                  <div style="padding-left: 10px">
+                    Түрээслүүлэгч нь барьцаа хөрөнгөөс суутгал хийснээ Түрээслэгчид мэдэгдэх үүрэгтэй.
+                  </div>
+                </div>
+                <div style="display: flex; margin-top: 10pt">
+                  <div>6.4</div>
+                  <div style="padding-left: 10px">
+                    Түрээслүүлэгч нь энэхүү гэрээний 6.2-т заасан хэмжээгээр Барьцаа хөрөнгөөс суутгал хийсэн нь ийнхүү суутгасны дараа үлдэж байгаа хохирлыг Түрээслэгчээс шаардах эрхийг үгүйсгэх үндэслэл болохгүй.
+                  </div>
+                </div>
+                <div style="display: flex; margin-top: 10pt">
+                  <div>6.5</div>
+                  <div style="padding-left: 10px">
+                    Энэхүү гэрээний хугацаа дуусаж, Түрээслэгч нь Талбайг Түрээслүүлэгчид буцаан хүлээлгэн өгөхөд аливаа зөрчил, хохирол үүсээгүй тохиолдолд барьцаа төлбөрийг Түрээслэгчид буцаан төлнө.
+                  </div>
+                </div>
+                </section>
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+              "
+            >
+              <div>Түрээслүүлэгч:________________</div>
+              <div>2</div>
+              <div>Түрээслэгч:________________</div>
+            </div>
+        </div>
+        <!-- PAGE 3 -->
+         <div class="oC myDiv">
+            <div>
+              <img alt=""/>
+            </div>
+            <div style="display: flex">
+              <!-- LEFT SIDE -->
+              <div style="width: 50%; margin-right: 15px">
+                <section>
+                  <div style="display: flex;">
+                    <div>6.6</div>
+                    <div style="padding-left: 10px">
+                      Барьцаа төлбөрийг Талбай хүлээлцсэнээс хойш ажлын 5 хоногийн дотор Түрээслэгчид буцаан шилжүүлнэ.
+                    </div>
+                  </div>
+                  <h4 style="padding-left: 25px; margin-top: 6pt;">
+                    Долоо. Түрээсийн хугацаанд Түрээслүүлэгчээс зөвшөөрөл авах
+                  </h4>
+                  <div style="display: flex; margin-top: 6pt;">
+                    <div>7.1</div>
+                    <div style="padding-left: 10px">
+                      Дараах тохиолдолд Түрээслэгч нь Түрээслүүлэгчээс урьдчилсан зөвшөөрлийг бичгээр авна:
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt">
+                    <div style="padding-left: 30px">7.1.1</div>
+                    <div style="padding-left: 10px">
+                      Талбайд засвар, засан сайжруулалт хийх;
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt">
+                    <div style="padding-left: 30px">7.1.2</div>
+                    <div style="padding-left: 10px">
+                      Талбайд аюул осол үүсгэхүйц цахилгаан болон газан халаагуур, газан зуух оруулах, ашиглах;
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt">
+                    <div style="padding-left: 30px">7.1.3</div>
+                    <div style="padding-left: 10px">
+                      Талбай болон бусдын эд хөрөнгөнд хохирол учрахаас бусад тохиолдолд Талбайн эд хөрөнгийг солих, өөрчлөх;
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt">
+                    <div style="padding-left: 30px">7.1.4</div>
+                    <div style="padding-left: 10px">
+                      Талбайд нэвтрэх боломжийг хаах, хана таазыг өрөмдөн цоолох;
+                    </div>
+                  </div>
+                   <div style="display: flex; margin-top: 10pt">
+                    <div style="padding-left: 30px">7.1.5</div>
+                    <div style="padding-left: 10px">
+                      Эд хөрөнгийн хамт түрээслүүлсэн Талбайн хувьд актаар хүлээлцсэн эд хөрөнгийг Талбайгаас түр хугацаагаар гаргах.
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt">
+                    <div>7.2</div>
+                    <div style="padding-left: 10px">
+                      Түрээслүүлэгч нь гэрээний 7.1-т заасан зөвшөөрөл авах хүсэлтийг хүлээн авснаас хойш ажлын 2 өдрийн дотор шийдвэрлэх үүрэгтэй.
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt">
+                    <div>7.3</div>
+                    <div style="padding-left: 10px">
+                      Түрээслүүлэгч нь зөвшөөрөл өгөхдөө Түрээслэгчээс нэмэлт мэдээлэл шаардаж болох бөгөөд тус мэдээллийг хүлээн авах хүртэл хугацаагаар энэхүү гэрээний 7.2-т заасан хугацааг хойшлуулна.
+                    </div>
+                  </div>
+                </section>
+                <section>
+                <h4 style="padding-left: 25px; margin-top: 6pt;">Найм. Хохирол хариуцан арилгах</h4>
+                <div style="display: flex; margin-top: 6pt;">
+                  <div>8.1</div>
+                  <div style="padding-left: 10px">
+                    Түрээслэгч нь Талбайг эзэмшиж, ашиглах явцад бусдад учруулсан аливаа гэм хорыг бүрэн хариуцна.
+                  </div>
+                </div>
+                <div style="display: flex; margin-top: 10pt">
+                  <div>8.2</div>
+                  <div style="padding-left: 10px">
+                    Түрээслэгчийн буруутай үйлдэл, эс үйлдэхүйн улмаас бусдад болон бусдын эд хөрөнгөд хохирол учруулсантай холбоотой аливаа нэхэмжлэл шаардлагаас Түрээслүүлэгчийг ангид байлгах үүрэгтэй.
+                  </div>
+                </div>
+                <div style="display: flex; margin-top: 10pt">
+                  <div>8.3</div>
+                  <div style="padding-left: 10px">
+                    Шүүх, эрх бүхий байгууллагын шийдвэрээр хохирлыг Түрээслүүлэгчээс гаргуулахаар шийдвэрлэсэн бол ийнхүү Түрээслүүлэгчийн төлөх хохирол болон уг хохиролтой холбоотойгоор хөлслөн авсан өмгөөлөгчийн зардлыг Түрээслэгч нөхөн төлөх үүрэгтэй.
+                  </div>
+                </div>
+              </section>
+              </div>
+              <!-- RIGHT SIDE -->
+              <div style="width: 50%; margin-left: 15px">
+                <section>
+                  <div style="display: flex;">
+                    <div>8.4</div>
+                    <div style="padding-left: 10px">
+                      Түрээслүүлэгч нь талбайн чанар, хийцлэлд үүссэн ноцтой гэмтэл доголдлын талаарх мэдээллийг мэдэж байсан боловч нуун дарагдуулсан, үүний улмаас Түрээслэгч, болон бусад этгээдийн амь нас эрүүл мэндэд хохирол учирсан бол ийнхүү учруулсан гэм хорыг хариуцан барагдуулах үүрэгтэй.
+                    </div>
+                  </div>
+                </section>
+                <section>
+                  <h4 style="padding-left: 25px; margin-top: 10pt;">
+                    Ес. Засвар үйлчилгээ, засан сайжруулалт, Талбайн бүтээц, хийцэд өөрчлөлт оруулах, бусад журам
+                  </h4>
+                  <div style="display: flex; margin-top: 6pt;">
+                    <div>9.1</div>
+                    <div style="padding-left: 10px">
+                      Түрээслэгч нь Талбайг байгаа нөхцөлөөр нь хүлээн авсан бөгөөд ердийн элэгдэл, хорогдлын улмаас Талбайг хэвийн ашиглах боломжгүй болсноос бусад тохиолдолд Түрээслүүлэгч нь Талбайд засвар үйлчилгээ хийх үүрэггүй.
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 6pt;">
+                    <div>9.2</div>
+                    <div style="padding-left: 10px">
+                      Түрээслэгч зөвшөөрөл авсны үндсэн дээр засан сайжруулалт хийж болох бөгөөд ийнхүү хийсэн засан сайжруулалтын салгаж болох хэсгийг гэрээний хугацаа дуусмагц өөрийн өмчлөл, эзэмшилд авах эрхтэй. Харин салгах боломжгүй засан сайжруулалтыг үлдээх бөгөөд ийнхүү үлдээсэн засан сайжруулалтын үнийг Түрээслүүлэгч төлөх үүрэг хүлээхгүй.
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 6pt;">
+                    <div>9.3</div>
+                    <div style="padding-left: 10px">
+                      Түрээсийн харилцаатай холбоотой энэхүү гэрээнд заагаагүй бусад харилцааг Түрээслүүлэгчийн баталсан дүрэм, журмын дагуу зохицуулах ба Түрээслэгч нь түүнийг дагаж мөрдөх үүрэгтэй.
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 6pt;">
+                    <div>9.4</div>
+                    <div style="padding-left: 10px">
+                      Түрээслэгч нь Гэрээний 9.3-т заасан дүрэм журмыг удаа дараа зөрчсөн бол Түрээслүүлэгч Гэрээнд заасан журмыг баримтлан гэрээг дангаар цуцлах эрхтэй.
+                    </div>
+                  </div>
+                </section>
+                <section>
+                <h4 style="padding-left: 25px; margin-top: 10pt;">
+                  Арав. Эрх шилжүүлэх
+                </h4>
+                <div style="display: flex; margin-top: 6pt;">
+                  <div>10.1</div>
+                  <div style="padding-left: 10px">
+                    Түрээслүүлэгч нь энэхүү гэрээгээр эдлэх дараах эрхийг гуравдагч этгээдэд шилжүүлж болно:
+                  </div>
+                </div>
+                <div style="display: flex; margin-top: 10pt">
+                    <div style="padding-left: 35px">10.1.1</div>
+                    <div style="padding-left: 10px">
+                      энэхүү гэрээний 6 дугаар зүйлд заасан барьцаа хөрөнгийг саатуулан барих, зохих журмын дагуу суутгал хийх;
+                    </div>
+                  </div>
+                <div style="display: flex; margin-top: 10pt">
+                    <div style="padding-left: 35px">10.1.2</div>
+                    <div style="padding-left: 10px">
+                      түрээсийн төлбөр, алдангийг шилжүүлэн авах.
+                    </div>
+                  </div>  
+                <div style="display: flex; margin-top: 6pt;">
+                  <div>10.2</div>
+                  <div style="padding-left: 10px">
+                    Түрээслүүлэгч нь энэхүү гэрээний 10.1-т заасан эрхийг шилжүүлсэн тухай Түрээслэгчид мэдэгдэнэ.
+                  </div>
+                </div>
+              </section>
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-top: 40px;
+              "
+            >
+              <div>Түрээслүүлэгч:________________</div>
+              <div>3</div>
+              <div>Түрээслэгч:________________</div>
+            </div>
+        </div>
+        <!-- PAGE 4 -->
+        <div class="oC myDiv">
+            <div><img alt=""/></div>
+            <!-- LEFT SIDE -->
+            <div style="display: flex">
+              <div style="width: 50%; margin-right: 15px">
+              <section>
+              <h4 style="padding-left: 30px; padding-top: 0px">
+                Арван нэг. Гэрээ цуцлах, дуусгавар болох
+              </h4>
+              <div style="display: flex; margin-top: 6pt;">
+                <div>11.1</div>
+                <div style="padding-left: 10px">
+                  Энэхүү Гэрээ нь дараах үндэслэлээр дуусгавар болно:
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 6pt">
+                <div style="padding-left: 30px">11.1.1</div>
+                <div style="padding-left: 10px">
+                  Гэрээний хугацаа дууссанаар;
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 6pt">
+                <div style="padding-left: 30px">11.1.2</div>
+                <div style="padding-left: 10px">
+                  энэхүү гэрээний бүх талууд тохиролцсоноор;
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 6pt">
+                <div style="padding-left: 30px">11.1.3</div>
+                <div style="padding-left: 10px">
+                  Түрээслэгчид урьдчилан сануулсан боловч Талбай болон түүний эд хөрөнгийг муутгасан, гэмтээсэн бол Түрээслүүлэгчийн санаачилгаар;
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 6pt">
+                <div style="padding-left: 30px">11.1.4</div>
+                <div style="padding-left: 10px">
+                  Түрээслэгч нэг сараас дээш хугацаанд түрээсийн төлбөрөө төлөөгүй бол Түрээслүүлэгчийн санаачилгаар;
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 6pt">
+                <div style="padding-left: 30px">11.1.5</div>
+                <div style="padding-left: 10px">
+                  Талбайг зориулалтаар нь ашиглах боломжгүй болсон бол Түрээслэгчийн санаачилгаар;
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 6pt">
+                <div style="padding-left: 30px">11.1.6</div>
+                <div style="padding-left: 10px">
+                  энэ гэрээнд заасан бусад үндэслэлээр.
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 10pt">
+                <div>11.2</div>
+                <div style="padding-left: 10px">
+                  Талууд нэг Талын санаачилгаар гэрээг цуцлах бол нөгөө Талдаа хуанлийн нэг сараас доошгүй хугацааны өмнө бичгээр мэдэгдэнэ.
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 10pt">
+                <div>11.3</div>
+                <div style="padding-left: 10px">
+                  Гэрээ дуусгавар болсон бол Түрээслэгч нь ашиглалтын хугацааны урсгал зардлыг бүрэн төлж, биет байдлын доголдолгүй, цэвэр, цэмцгэр Талбайг Түрээслүүлэгчид хүлээлгэн өгч, акт үйлдэх ба Талууд холбогдох төлбөрийн асуудлыг харилцан хаана.
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 10pt">
+                <div>11.4</div>
+                <div style="padding-left: 10px">
+                  Хэрэв Талбай ашигласны зардлыг хугацаанд төлөөгүйгээс аливаа алданги, торгууль үүсвэл Түрээслэгч үл маргах журмаар төлж барагдуулна.
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 10pt">
+                <div>11.5</div>
+                <div style="padding-left: 10px">
+                  Түрээслэгч нь Гэрээг 11.1-д зааснаас бусад үндэслэлээр хугацаанаас өмнө цуцлах бол Түрээслүүлэгч дараагийн Түрээслэгчийг олох хүртэлх хугацааны түрээсийн төлбөрийг Түрээслүүлэгчид төлнө.
+                </div>
+              </div>
+              <div style="display: flex; margin-top: 10pt">
+                <div>11.6</div>
+                <div style="padding-left: 10px">
+                  Түрээслүүлэгч нь Гэрээг үндэслэлгүйгээр хугацаанаас өмнө цуцалсан тохиолдолд Түрээслэгчийн дараагийн хөлсний Талбайг олохтой холбоотой зардлыг хариуцна.
+                </div>
+              </div>
+            </section>
+              </div>
+    
+              <!-- RIGHT SIDE -->
+              <div style="width: 50%; margin-left: 15px">
+                <section>
+                  <h4 style="padding-left: 30px;">
+                    Арван хоёр. Давагдашгүй хүчин зүйлс
+                  </h4>
+                  <div style="display: flex;">
+                    <div>12.1</div>
+                    <div style="padding-left: 10px">
+                      Гэнэтийн болон давагдашгүй хүчин зүйл гэж дайн (зарласан болон зарлаагүй), хорлон сүйтгэх ажиллагаа, бослого, үймээн, байгалийн ноцтой үзэгдэл, Түрээслэгчийн гэм буруутай үйлдэл, эс үйлдэхүйгээс хамааралгүйгээр гарсан гал түймэр, осол, дэлбэрэлт зэрэг Талуудын зохих хяналтаас давсан, гэрээний үүргийг биелүүлэх боломжгүй нөхцөл байдал, үйл явдлыг ойлгоно.
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 6pt">
+                  <div>12.2</div>
+                  <div style="padding-left: 10px">
+                    Гэнэтийн болон давагдашгүй хүчин зүйлийн нөлөөнд өртөж, гэрээний үүргээ гүйцэтгэх боломжгүй болсон тал энэ тухай ажлын 3 өдрийн дотор нөгөө талд мэдэгдэж, аюулаас хамгаалах боломжит арга хэмжээг авна.
+                  </div>
+                  </div>
+                  <div style="display: flex; margin-top: 6pt">
+                  <div>12.3</div>
+                  <div style="padding-left: 10px">
+                    Талууд 12.2-т заасан арга хэмжээг авсан боловч эрсдэлээс хамгаалах үр дүнд хүрээгүй бол хариуцлагаас чөлөөлөгдөнө.
+                  </div>
+                  </div>
+                </section>
+                <section>
+                  <h4 style="padding-left: 30px; margin-top: 6pt;">
+                   Арван гурав. Маргаан шийдвэрлэх
+                  </h4>
+                  <div style="display: flex; margin-top: 6pt;">
+                    <div>13.1</div>
+                    <div style="padding-left: 10px">
+                      Энэхүү Гэрээнд шууд заагаагүй аливаа асуудлыг Монгол Улсад хүчин төгөлдөр мөрдөгдөж буй хууль тогтоомжийн дагуу зохицуулна.
+                    </div>
+                  </div>
+                  <div style="display: flex; margin-top: 10pt;">
+                  <div>13.2</div>
+                  <div style="padding-left: 10px">
+                    Талууд энэхүү Гэрээтэй холбоотой үүссэн аливаа маргааныг эвийн журмаар шийдвэрлэхийг эрмэлзэх бөгөөд маргааныг эвийн журмаар шийдвэрлэж чадаагүй тохиолдолд Монгол улсын шүүхээр шийдвэрлүүлнэ.
+                  </div>
+                  </div>
+              </section>
+              <section>
+                <h4 style="padding-left: 30px; margin-top: 6pt;">Арван дөрөв. Бусад</h4>
+                <div style="display: flex; margin-top: 6pt;">
+                  <div>14.1</div>
+                  <div style="padding-left: 10px">
+                    Талууд харилцан тохиролцсоны үндсэн дээр Гэрээнд зөвхөн бичгээр нэмэлт, өөрчлөлт оруулна. Гэрээний хавсралт, тусгай нөхцөл, аливаа нэмэлт өөрчлөлт нь энэхүү Гэрээний нэгэн адил хүчинтэй байх бөгөөд Гэрээний салшгүй хэсэг болно.
+                  </div>
+                </div>
+                <div style="display: flex; margin-top: 10pt;">
+                  <div>14.2</div>
+                  <div style="padding-left: 10px">
+                    Энэхүү Гэрээг 2 хувь үйлдсэн ба Талуудын гарын үсэг зурж баталгаажуулсан хувь бүрийг эх хувь хэмээн тооцох ба бүх хувиудыг хамтад нь нэгэн ижил Гэрээ хэмээн тооцох ба бүх хувиудыг хамтад нь нэгэн ижил Гэрээ хэмээн тооцно.
+                  </div>
+                </div>
+              </section>
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-top: 90px;
+              "
+            >
+              <div>Түрээслүүлэгч:________________</div>
+              <div>4</div>
+              <div>Түрээслэгч:________________</div>
+            </div>
+        </div>
+        <!-- PAGE 6 -->
+        <div class="oC myDiv">
+            <img alt=""/>
+            <h4 style="text-align: center; padding: 4px">ХОЁРДУГААР БҮЛЭГ</h4>
+            <h4 style="text-align: center; padding: 0px">Гэрээний тусгай нөхцөл</h4>
+            <h4 style="text-decoration: underline">
+              А. Түрээсийн талбайн мэдээлэл
+            </h4>
+            <table>
+              <tr>
+                <td>1</td>
+                <td>Улсын бүртгэлийн дугаар</td>
+                <td>{{realStateNum}}</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Талбайн хэмжээ</td>
+                <td>{{mkv}} мкв</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Талбайн зориулалт</td>
+                <td>{{zoriulalt}}</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Дэлгэрэнгүй хаяг</td>
+                <td>{{tureesluulegchAddress}}</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Хууль ёсны өмчлөгчийн талаарх мэдээлэл</td>
+                <td>
+                  Нэр: {{tureesluulegchLast}} овогтой {{tureesluulegchFirst}}<br />
+                  Регистрийн дугаар: {{tureesluulegchRD}}
+                </td>
+              </tr>
+                <td>6</td>
+                <td>Дэлгэрэнгүй лавлагаа</td>
+                <td>{{lavlagaa}}</td>
+              </tr>
+            </table>
+            <h4 style="text-decoration: underline">Б. Гэрээний төлбөр</h4>
+            <table>
+              <tr>
+                <td>1</td>
+                <td>Түрээсийн хугацаа</td>
+                <td>
+                  <span>{{cDateY}}</span> оны
+                  <span>{{cDateM}}</span> сарын
+                  <span>{{cDateD}}</span> - өдрөөс<br />
+                  <span>{{eYear}}</span> оны
+                  <span>{{eMonth}}</span> сарын
+                  <span>{{eDay}}</span> - ны өдөр хүртэл<br />
+                  <span>{{rentMonth}}</span> сарын
+                  хугацаатай байгуулав.
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Түрээсийн төлбөр (сараар)</td>
+                <td><span>{{payment}}</span> төгрөг</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Түрээсийн төлбөр төлөх хугацаа</td>
+                <td>Сар болгоны {{paymentDay}}-ны өдөр төлнө.</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Түрээсийн төлбөр төлөх хугацаа хэтэрсэн тохиолдолд төлөх алданги</td>
+                <td>
+                  Төлбөл зохих төлбөрийн дүнгээс өдрийн <strong>0,3</strong> хувьтай тэнцэх алданги тооцно.
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Гэрээний барьцаа төлбөр</td>
+                <td>
+                  Нэг сарын түрээсийн үнийн дүнтэй тэнцүү буюу <strong>{{payment}}</strong> төгрөг
+                  байна.
+                </td>
+              </tr>
+            </table>
+            <div style="display: flex; justify-content: center; padding: 60px 120px; text-align: center">
+              <em>Талууд энэхүү Гэрээнд заасан бүхий л нөхцөл, заалтуудыг хүлээн зөвшөөрч байгаагаа нотлон дор гарын үсэг зурж баталгаажуулав.</em>
+            </div>
+            <div style="display: flex; justify-content: space-between">
+              <div style="width: 50%; font-weight: bold; padding: 25px">
+                <div>Түрээслүүлэгчийг төлөөлж:</div>
+                <div style="font-weight: normal; margin-top: 10pt">
+                  <strong>{{tureesluulegchLast}}</strong> овогтой <strong>{{tureesluulegchFirst}}</strong>
+                </div>
+                <div style="font-weight: normal; margin-top: 10pt">
+                  ГАРЫН ҮСЭГ: 
+                </div>
+                <div style="font-weight: normal; margin-top: 10pt">Утас: {{tureesluulegchNum}}</div>
+                <div style="font-weight: normal; margin-top: 10pt">Хаяг: {{tureesluulegchAddress}}</div>
+              </div>
+              <div style="width: 50%; font-weight: bold; padding: 25px">
+              <div>Түрээслэгчийг төлөөлж:</div>
+              <div style="font-weight: normal; margin-top: 10pt">
+                <strong>{{tureeslegchLast}}</strong> овогтой <strong>{{tureeslegchFirst}}</strong>
+              </div>
+              <div style="font-weight: normal; margin-top: 10pt">
+                ГАРЫН ҮСЭГ: 
+              </div>
+              <div style="font-weight: normal; margin-top: 10pt">Утас: {{tureeslegchNum}}</div>
+              <div style="font-weight: normal; margin-top: 10pt">Хаяг: {{tureeslegchAddress}}</div>
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-top: 90px;
+              "
+            >
+              <div>Түрээслүүлэгч:________________</div>
+              <div>5</div>
+              <div>Түрээслэгч:________________</div>
+            </div>
+        </div>
+        <!-- Мэдэгдэл -->
+        <div class="fC myDiv">
+            <h4 style="text-align:center;">МЭДЭГДЭЛ</h4>
+            <h4 style="text-align:center; padding-bottom: 20px; padding-top: 0px">{{tureesluulegchLast}} овогтой {{tureesluulegchFirst}}-д</h4>
+            <p>
+              <strong>№.......................</strong> тоот Факторингийн
+              үйлчилгээний гэрээний дагуу Түрээслүүлэгч
+              <strong>{{tureesluulegchLast}}</strong> овогтой <strong>{{tureesluulegchFirst}}</strong> нь
+              <strong>№.......................</strong> тоот Түрээсийн гэрээний:
+            </p>
+            <ol>
+              <li>
+                5.1, 5.2, 6.2.2-т тус тус заасны дагуу түрээсийн төлбөр болон түүний алдангийг Түрээслэгчээс шаардах эрх;
+              </li>
+              <li>
+                13.2-т заасны дагуу Үүрэг гүйцэтгэгч түрээсийн төлбөрийг төлөөгүй тохиолдолд шүүхэд хандах эрх;
+              </li>
+              <li>
+                6.1-т заасны дагуу барьцаа төлбөр саатуулан барих, 6.2-т заасан барьцаа хөрөнгийг захиран зарцуулах эрхийг “Рэнтпэй Финанс ББСБ” ХХК-д шилжүүлсэн болохыг үүгээр мэдэгдэж байна.
+              </li>
+            </ol>
+            <p>
+              Иймд, Түрээслэгч нь түрээсийн төлбөрийг дараах байдлаар төлөхөөр байгааг анхаарна уу.
+            </p>
+            <table>
+                <tr>
+                 <td><strong>№</strong></td>
+                 <td style="width: 30%; text-align: center"><strong>Төлбөр хийх өдөр</strong></td>
+                 <td style="width: 30%; text-align: center"><strong>Түрээсийн төлбөрийн дүн</strong></td>
+                 <td style="width: 30%; text-align: center;"><strong>Үлдэгдэл</strong></td>
+                </tr>
+                <tr>
+                 <td style='text-align: center'>1</td>
+                 <td style='text-align: center'>{{firstMonth}}</td>
+                 <td style='text-align: center'>{{payment}}</td>
+                 <td style="padding-left: 6px; text-align: center">{{firstRemain}}</td>
+                </tr>
+                <tr>
+                 <td style='text-align: center'>2</td>
+                 <td style='text-align: center'>{{secondMonth}}</td>
+                 <td style='text-align: center'>{{payment}}</td>
+                 <td style="padding-left: 6px; text-align: center">{{secondRemain}}</td>
+                </tr>
+                <tr>
+                 <td style='text-align: center'>3</td>
+                 <td style='text-align: center'>{{thirdMonth}}</td>
+                 <td style='text-align: center'>{{payment}}</td>
+                 <td style="padding-left: 6px; text-align: center">{{thirdRemain}}</td>
+                </tr>
+                <tr>
+                 <td style='text-align: center'>4</td>
+                 <td style='text-align: center'>{{fourthMonth}}</td>
+                 <td style='text-align: center'>{{payment}}</td>
+                 <td style="padding-left: 6px; text-align: center">{{fourthRemain}}</td>
+                </tr>
+                <tr>
+                 <td style='text-align: center'>5</td>
+                 <td style='text-align: center'>{{fifthMonth}}</td>
+                 <td style='text-align: center'>{{payment}}</td>
+                 <td style="padding-left: 6px; text-align: center">{{fifthRemain}}</td>
+                </tr>
+                <tr>
+                 <td style='text-align: center'>6</td>
+                 <td style='text-align: center'>{{sixthMonth}}</td>
+                 <td style='text-align: center'>{{payment}}</td>
+                 <td style="padding-left: 6px; text-align: center">{{sixthRemain}}</td>
+                </tr>
+                <tr>
+                 <td></td>
+                 <td style='text-align: center'>Нийт</td>
+                 <td style='text-align: center'>{{sum}}</td>
+                 <td></td>
+                </tr>
+            </table>
+            <p style="padding-top: 20px;">
+              <strong>Нийт төлөх дүн:&nbsp;&nbsp;&nbsp; </strong
+              ><strong>&nbsp;&nbsp;&nbsp;{{sum}}</strong>
+            </p>
+            <div>
+            <p><strong>Төлбөр төлөх дансы мэдээлэл:</strong></p>
+            <p>
+              Дансны дугаар: <strong>Хаан Банк</strong> <strong>-</strong>
+              <strong>5040400120</strong>
+            </p>
+            <p>
+              Дансны нэр:<strong>&nbsp; &ldquo;Рэнтпэй Финанс ББСБ&rdquo;</strong>
+            </p>
+            <p>Гүйлгээний утга: <strong>{{tureeslegchRD}}</strong></p>
+          
+          <div style="display: flex; padding-top: 40px">
+            <div style="width: 50%; text-align: left;">
+            МЭДЭГДЭЛ ХҮРГҮҮЛСЭН:
+            <div style="margin-top: 10pt">
+                ТҮРЭЭСЛҮҮЛЭГЧ: <strong>{{ownerName}}</strong>
+                <p style="text-align: left; margin-top: 10pt">Гарын үсэг:</p>
+                </div>
+            </div>
+            <div style="width: 50%; text-align: left;">
+            МЭДЭГДЭЛ ХҮЛЭЭН АВСАН:
+                <div style="margin-top: 10pt">
+                ТҮРЭЭСЛЭГЧ: <strong>{{buyerName}}</strong>
+                <p style="text-align: left; margin-top: 10pt">Гарын үсэг:</p>
+                </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </body>
+    </html>
