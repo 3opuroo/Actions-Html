@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta https-equiv="X-Frame-Options" name="viewport" content="width=device-width, initial-scale=1 deny">
+    <title>MAP</title>
+    <style>
+        body {
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #map-app {
+            height: 430px;
+            width: 100%;
+        }
+
+        #golomt-branch{
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+            gap: 10px;
+            margin-right: 1em;
+            margin-left: 1em;
+            padding: 0px;
+            padding-bottom: 2em;
+        }
+
+        #golomt-branch li {
+            background-color: #f1f3f4; 
+            /* #6773fa; */
+            display: block;
+            color: black;
+            padding: 1em;
+            border-radius: 0.5em;
+            font-size: .9em;
+        }
+
+        #golomt-branch li > p {
+            padding: 0;
+            padding-top:1em;
+            margin:0;
+        }
+        
+        .location-btn {
+            margin-top: 1em;
+            margin-left: 1.2em;
+            background: linear-gradient(to right, #a918fa, #6773fa);
+            outline: 0;
+            box-shadow: none;
+            padding: .5em 1em;
+            color: #fff;
+            border: none;
+            border-radius: .4em;
+            cursor:pointer
+        }
+
+        .overlay {
+            /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+            height: 0%;
+            width: 100%;
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Sit on top */
+            left: 0;
+            top: 0;
+            background-color: rgb(88, 80, 80); /* Black fallback color */
+            background-color: rgba(75, 71, 71, 0.9); /* Black w/opacity */
+            overflow-x: hidden; /* Disable horizontal scroll */
+             /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+        }
+        .lds-roller {
+            display: block;
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            opacity: 1;
+            transform: translate(-50%, -50%)
+        }
+        .lds-roller div {
+        animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        transform-origin: 40px 40px;
+        }
+        .lds-roller div:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #fff;
+        margin: -4px 0 0 -4px;
+        }
+        .lds-roller div:nth-child(1) {
+        animation-delay: -0.036s;
+        }
+        .lds-roller div:nth-child(1):after {
+        top: 63px;
+        left: 63px;
+        }
+        .lds-roller div:nth-child(2) {
+        animation-delay: -0.072s;
+        }
+        .lds-roller div:nth-child(2):after {
+        top: 68px;
+        left: 56px;
+        }
+        .lds-roller div:nth-child(3) {
+        animation-delay: -0.108s;
+        }
+        .lds-roller div:nth-child(3):after {
+        top: 71px;
+        left: 48px;
+        }
+        .lds-roller div:nth-child(4) {
+        animation-delay: -0.144s;
+        }
+        .lds-roller div:nth-child(4):after {
+        top: 72px;
+        left: 40px;
+        }
+        .lds-roller div:nth-child(5) {
+        animation-delay: -0.18s;
+        }
+        .lds-roller div:nth-child(5):after {
+        top: 71px;
+        left: 32px;
+        }
+        .lds-roller div:nth-child(6) {
+        animation-delay: -0.216s;
+        }
+        .lds-roller div:nth-child(6):after {
+        top: 68px;
+        left: 24px;
+        }
+        .lds-roller div:nth-child(7) {
+        animation-delay: -0.252s;
+        }
+        .lds-roller div:nth-child(7):after {
+        top: 63px;
+        left: 17px;
+        }
+        .lds-roller div:nth-child(8) {
+        animation-delay: -0.288s;
+        }
+        .lds-roller div:nth-child(8):after {
+        top: 56px;
+        left: 12px;
+        }
+        @keyframes lds-roller {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+        }
+
+    </style>
+  </head>
+  <body>
+    <div id="map-app"></div>
+    <input id="lat" name="lat" hidden value="47.9165506" />
+    <input id="long" name="long" hidden value="106.9168318" />
+ 
+    <input type="hidden" name="psid" value="" id="psid" />
+    <input class="location-btn" type="button" onclick="javascript:sendLocation(event)" value="Танд ойр салбарууд" style="display:flex;justify-content:center" />
+
+
+
+    <ul id="golomt-branch">
+
+
+    </ul>
+    <div class="overlay">
+        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+    </div>
+    <script type=text/javascript src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&key=AIzaSyAMJary_C1wShvOSFvwAoPnzzqguDhR3bM&libraries=places&fields=name,opening_hours"></script>
+    <script>
+    var myLatlng = new google.maps.LatLng(47.9165506, 106.9168318);
+    var myOptions = {
+        zoom: 15,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map-app"), myOptions);
+    const directionsRenderer = new google.maps.DirectionsRenderer();
+    const directionsService = new google.maps.DirectionsService();
+    directionsRenderer.setMap(map);
+    function initialize() {
+        
+
+        var marker = new google.maps.Marker({
+            draggable: true,
+            position: myLatlng,
+            map: map,
+            title: "MN, UB"
+        });
+
+        google.maps.event.addListener(marker, 'dragend', function(event) {
+            document.getElementById("lat").value = event.latLng.lat();
+            document.getElementById("long").value = event.latLng.lng();
+        });
+
+        google.maps.event.addListener(map, 'click', function(event) {
+            document.getElementById("lat").value = event.latLng.lat();
+            document.getElementById("long").value = event.latLng.lng();
+            // console.log('event.latLng', event.latLng)
+            marker.setPosition(event.latLng);
+        });
+
+        const infoWindow = new google.maps.InfoWindow();
+
+        // const locationButton = document.createElement("button");
+        // locationButton.classList = 'location-btn'
+
+        // locationButton.textContent = "Байршил олох";
+        // locationButton.classList.add("custom-map-control-button");
+        // map.controls[google.maps.ControlPosition.TOP_RIGHT].push(locationButton);
+        // locationButton.addEventListener("click", () => {
+            
+        // });
+
+        // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                const pos = {
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                };
+                document.getElementById("lat").value = pos.lat;
+                document.getElementById("long").value = pos.lng;
+                infoWindow.setPosition(pos);
+                infoWindow.setContent("Таны байршил.");
+                infoWindow.open(map);
+                marker.setPosition(pos)
+                map.setCenter(pos);
+                
+                },
+                () => {
+                handleLocationError(true, infoWindow, map.getCenter());
+                }
+            );
+        } else {
+        // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+        }
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            // console.error('Байшил олох боломжгүй байна!')
+            infoWindow.setContent(
+                'Байршил олох боломжгүй байна!'
+            );
+            infoWindow.open(map);
+        }
+        
+    }
+    
+    google.maps.event.addDomListener(window, "load", initialize());
+
+    function calculateAndDisplayRoute(destLngLat) {
+        directionsService
+        .route({
+        origin: { lat: +document.getElementById("lat").value, lng: +document.getElementById("long").value }, // Haight.
+        destination: { lat: destLngLat.lat, lng: destLngLat.lng }, // Ocean Beach.
+        // Note that Javascript allows us to access the constant
+        // using square brackets and a string value as its
+        // "property."
+        travelMode: 'WALKING',
+        })
+        .then((response) => {
+            directionsRenderer.setDirections(response);
+        })
+        .catch((e) => window.alert("Directions request failed due to " + e));
+    }
+
+    function sendLocation(e) {
+      e.preventDefault()
+      toggleOverlay(true)
+
+      const lat = document.getElementById('lat')
+      const long = document.getElementById('long')
+      var pyrmont = new google.maps.LatLng(lat.value, long.value);
+      const type = 'bank'
+      const radius = 200
+      const keyword = 'Golomt Bank'
+
+      var url = `https://chatbot.golomtbank.com/api/google/near_by_map?long=${long.value}&lat=${lat.value}&types=${type}&radius=${radius}`;
+      console.log("URL", url);
+
+      fetch(url, {
+          headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin': '*'
+          },
+          withCredentials: true
+      })
+      .then(res => res.json())
+      .then(res => {
+        const { code, message} = res
+        if(code === 1000){
+            var request = {
+                location: pyrmont,
+                radius,
+                keyword,
+                type
+            };
+            infowindow = new google.maps.InfoWindow();
+            var service = new google.maps.places.PlacesService(map);
+            service.nearbySearch(request, callback);
+            buildBranchTemplate(message)
+            toggleOverlay(false)
+        }
+      }).catch(err => {
+          console.log('error:', err)
+          toggleOverlay(false)
+      })
+    }
+
+    function buildBranchTemplate(message) {
+        const golomtBranch = document.getElementById('golomt-branch')
+        golomtBranch.innerHTML = ''
+        message?.forEach((branch) => {
+            const branchEl = document.createElement('li')
+            const newContent = document.createTextNode('Салбар: '+ branch?.name);
+            branchEl.append(newContent)
+            branchEl.append(document.createElement('br'))
+            branchEl.append(document.createElement('br'))
+            branchEl.append(document.createTextNode('Байршил: ' + branch?.address))
+            if(branch?.opening_hours){
+                const branchEl1 = document.createElement('p')
+                branchEl1.append(document.createElement('hr'))
+                branchEl1.append(document.createTextNode('Цагийн хуваарь: '))
+                branchEl1.append(document.createElement('br'))
+                const newContent1 = document.createTextNode(branch?.opening_hours);
+                branchEl1.append(newContent1)
+                branchEl.append(branchEl1)
+            }
+            golomtBranch.append(branchEl)
+        })
+    }
+
+    function toggleOverlay(show) {
+        const overlay = document.getElementsByClassName('overlay')[0]
+        if(show){
+            overlay.style.height = "100%";
+        } else {
+            overlay.style.height = "0%";
+        }
+    }
+
+    function callback(results, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+            for (var i = 0; i < results.length; i++) {
+                createMarker(results[i]);
+            }
+        }
+    }
+
+    function createMarker(place) {
+        var placeLoc = place.geometry.location;
+        var marker = new google.maps.Marker({
+            map: map,
+            position: place.geometry.location
+        });
+
+        var request =  {
+            reference: place.reference
+        };
+        var service = new google.maps.places.PlacesService(map);
+        var weekdays_text = ''
+        service.getDetails(request, function(place, status) {
+
+            var open = null;
+            try{
+                open = place.opening_hours
+            } catch(e) {
+                open='No work time';
+            }
+            weekdays_text = open?.weekday_text
+        })
+
+        google.maps.event.addListener(marker, 'click', function() {
+            
+            infowindow.setContent(
+                place.name + '<br>' +
+                // weekdays_text?.join('<br>') + '<br>' +
+                place.vicinity
+            );
+            // infowindow.set
+            infowindow.open(map, this);
+
+            calculateAndDisplayRoute({ lat: place.geometry.location.lat(), lng: place.geometry.location.lng() })
+        });
+    }
+    </script>
+  </body>
+</html>
