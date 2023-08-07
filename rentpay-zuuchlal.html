@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        font-family: Arial;
+        font-size: 10pt;
+        line-height: 1.25;
+      }
+      img {
+        width: 135px;
+        height: 33px;
+        content: url("https://chatbot.mn/uploads/image/20221020/e445f872a508927e0784968d8fa08fa3.png");
+      }
+      h4 {
+        margin: 0px;
+        padding: 8px;
+      }
+      p {
+        margin: 0px;
+        padding-bottom: 10px;
+      }
+      section {
+        text-align: justify;
+      }
+      span {
+        font-weight: bold;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      table td {
+        border: 1px solid black;
+      }
+      tr td:nth-child(1) {
+        padding: 6px;
+        width: 3%;
+      }
+      tr td:nth-child(2) {
+        padding: 0 6px;
+        width: 45%;
+      }
+      tr td:nth-child(3) {
+        padding: 0 6px;
+      }
+
+      @media print {
+        .myDiv {
+          break-inside: avoid;
+          position: relative;
+        }
+      }
+
+      .zC {
+        padding-top: 2.52cm;
+        padding-bottom: 2.22cm;
+        padding-left: 2.27cm;
+        padding-right: 1.9cm;
+      }
+      .zImg {
+        position: absolute;
+        top: 1.5cm;
+        left: 2cm;
+        z-index: 100;
+      }
+      .zFooter {
+        position: absolute;
+        bottom: 1.5cm;
+        left: 2cm;
+        display: flex;
+        justify-content: space-between;
+        width: 82%;
+      }
+      .oC {
+        padding: 1.5cm;
+      }
+      .fC {
+        padding: 2.54cm 2cm;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Зуучлах гэрээ эхлэл -->
+    <!-- PAGE 1 -->
+    <div class="zC">
+      <div>
+        <img alt="" class="zImg" />
+      </div>
+      <div>
+        <h4 style="text-align: center; padding-bottom: 12pt">
+          ЗУУЧЛАЛЫН ОНЦГОЙ ЭРХИЙН ГЭРЭЭ
+        </h4>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+          "
+        >
+          <div>
+            <span>{{cDateY}}</span> оны <span>{{cDateM}}</span> сарын
+            <span>{{cDateD}}</span>-ны өдөр
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;№
+            З/{{zuuchlahContractNumber}}
+          </div>
+          <div style="font-weight: bold">Улаанбаатар хот</div>
+        </div>
+      </div>
+      <section>
+        <div style="margin-top: 12pt">
+          Энэхүү “Зуучлалын онцгой эрхийн гэрээ” (цаашид
+          <span>“Гэрээ”</span> гэх)-г:
+        </div>
+        <div style="text-indent: 4em; margin-top: 12pt">
+          Нэг талаас: 6730043 регистрийн дугаартай “РЭНТПЭЙ СОЛЬЮШН” ХХК,
+          түүнийг төлөөлж Үйл ажиллагаа эрхэлсэн захирал Б.Мөнхбат, Зөвлөх
+          менежер
+          <span>{{agent}}</span> (цаашид <span>“Зуучлагч”</span> гэх)
+        </div>
+        <div style="text-indent: 4em; margin-top: 12pt">
+          Нөгөө талаас: <span>{{tureesluulegchRD}}</span> регистрийн дугаартай
+          <span>{{tureesluulegchLast}}</span> овогтой
+          <span>{{tureesluulegchFirst}}</span> (цаашид
+          <span>“Зуучлуулагч”</span> гэх) бид дараах нөхцөлөөр харилцан
+          тохиролцож, энэхүү гэрээг {{eYear}} оны {{eMonth}} сарын {{eDay}}-ны
+          өдөр хүртэл байгуулав.
+        </div>
+      </section>
+      <div style="display: flex; margin-top: 15pt">
+        <!-- LEFT SIDE -->
+        <div style="width: 50%; margin-right: 15px">
+          <section>
+            <h4 style="text-indent: 15px; padding: 15pt 0px">
+              Нэг. Нийтлэг үндэслэл
+            </h4>
+            <div style="display: flex">
+              <div>1.1</div>
+              <div style="padding-left: 10px">
+                <span>Гэрээний зорилго:</span> Энэхүү гэрээгээр Зуучлагч нь
+                РэнтПэй платформоор дамжуулан Зуучлуулагчийн өмчлөл, эзэмшлийн
+                үл хөдлөх эд хөрөнгийг түрээслэх гэрээ байгуулах түүнийг
+                боломжит хөлслөгчтэй холбон зуучлах, менежментийн үйлчилгээ
+                үзүүлэх, Зуучлуулагч нь зуучлалын болон менежментийн
+                үйлчилгээний төлбөр төлөхтэй холбогдсон харилцааг зохицуулна.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>1.2</div>
+              <div style="padding-left: 10px">
+                Зуучлалын үйлчилгээ нь Зуучлагчаас боломжит Хөлслөгчийг олж
+                өгснөөр, үүний дагуу Зуучлуулагч нь зуучлалын үйлчилгээний
+                төлбөрийг төлөх хүртэлх хугацаанд үйлчилнэ.Менежментийн
+                үйлчилгээний хугацааг Зуучлуулагч болон Хөлслөгчийн хооронд
+                байгуулагдсан “Орон сууц хөлслөх гэрээ”-ний хүчинтэй байх
+                хугацаагаар тодорхойлно.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>1.3</div>
+              <div style="padding-left: 10px">
+                Зуучлалын үйлчилгээний үр дүнд “Орон сууц хөлслөх гэрээ”
+                байгуулагдсан нь менежментийн үйлчилгээг зогсоох, менежментийн
+                үйлчилгээний төлбөрийг төлөхгүй байх үндэслэл болохгүй.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>1.4</div>
+              <div style="padding-left: 10px">
+                Зуучлуулах орон сууцны нэг сарын түрээсийн төлбөр
+                <span>{{payment}}</span> төгрөг байхаар тохиролцов.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>1.5</div>
+              <div style="padding-left: 10px">
+                Зуучлагч нь энэхүү гэрээийн хүрээнд дараах орон сууыг зуучлах ба
+                холбогдох менежментийн үйлчилгээг үзүүлнэ.
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- RIGHT SIDE -->
+        <div style="width: 50%; margin-left: 15px">
+          <section>
+            <h4 style="padding-left: 25px; padding-top: 20px">
+              Улсын бүртгэлийн дугаар:<br />{{realStateNum}}
+            </h4>
+            <h4 style="padding-left: 25px; padding-top: 0px">
+              Хаяг:<br />{{address}}
+            </h4>
+            <h4 style="padding-left: 25px; padding: 12pt 0px">
+              Хоёр. Мэдэгдэл, баталгаа
+            </h4>
+            <div style="display: flex">
+              <div>2.1</div>
+              <div style="padding-left: 10px">
+                Зуучлуулагчийн баталгаа, мэдэгдэл:
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                РэнтПэй платформын нөхцөлийн дагуу өөрийн орон сууцыг боломжит
+                этгээдэд хөлслүүлэх ажлыг зохион байгуулах онцгой эрхийг
+                Зуучлагчид олгосон болно.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                Орон сууцны бусад хамтран өмчлөгчдөөс орон сууц хөлслүүлэх
+                талаар урьдчилан зөвшөөрөл авсан болно.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                Орон сууцтай холбоотой гуравдагч этгээд аливаа шаардлага гаргах
+                нөхцөл бүрдээгүй.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                Өөрийн хувийн мэдээллийг боломжит хөлслөгч, факторингийн
+                үйлчилгээ үзүүлэх эрх бүхий этгээдэд дамжуулах, серверт
+                хадгалахыг хүлээн зөвшөөрөв.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                Энэхүү гэрээг хуурамч нөхцөл байдлыг бүрдүүлж, залилан мэхлэх
+                зорилгоор байгуулаагүй.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                Зуучлагчийн зөвшөөрөлгүйгээр түүнтэй төсөөтэй үйл ажиллагаа
+                явуулж буй этгээдээр давхар зуучлуулахгүй.
+              </div>
+            </div>
+          </section>
+          <section>
+            <div style="display: flex; margin-top: 12pt">
+              <div>2.2</div>
+              <div style="padding-left: 10px">
+                Зуучлагчийн баталгаа мэдэгдэл:
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                Зуучлуулагчийн өмнө орон сууц хөлслөх харилцааны үргэлжлэх
+                хугацааны баталгаа гаргаагүй болно
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="zFooter">
+        <div>Зуучлагчийг төлөөлж:________________</div>
+        <div>1</div>
+        <div>Зуучлуулагчийг төлөөлж:________________</div>
+      </div>
+    </div>
+    <!-- PAGE 2 -->
+    <div class="zC myDiv">
+      <div><img alt="" class="zImg" /></div>
+      <!-- LEFT SIDE -->
+      <div style="display: flex">
+        <div style="width: 50%; margin-right: 15px">
+          <section>
+            <div style="display: flex">
+              <div>2.3</div>
+              <div style="padding-left: 10px">
+                Гэрээний талууд мэдэгдэл, зөвшөөрөл, хүсэлт болон шаардлагатай
+                мэдээллийг РэнтПэй платформын чатбот, мэйл, мэссэжээр илгээж
+                харилцана.
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4 style="padding-left: 25px; padding-top: 12pt">
+              Гурав. Зуучлалын үйлчилгээ, төлбөр
+            </h4>
+            <div style="display: flex; padding-top: 10pt">
+              <div>3.1</div>
+              <div style="padding-left: 10px">
+                Зуучлагчид РэнтПэй платформоор дамжуулан орон сууц хөлслөх зар
+                хүргэх, Зуучлуулагчийн хүсэлтээр факторинг үйлчилгээнд зуучлах,
+                орон сууцтай танилцах уулзалт зохион байгуулах, орон сууц
+                хөлслөх гэрээ байгуулах үйлчилгээг үзүүлнэ.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>3.2</div>
+              <div style="padding-left: 10px">
+                Зуучлалын үйлчилгээний төлбөр нь “Орон сууц хөлслөх гэрээ”-ний
+                хагас сарын түрээсийн дүнтэй тэнцүү байна.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>3.3</div>
+              <div style="padding-left: 10px">
+                Зуучлалын төлбөрийг факторингийн үйлчилгээ үзүүлж байгаа
+                байгууллага нь Зуучлуулагчид төлөх факторингийн (түрээсийн 6
+                сарын) төлбөрөөс суутган шилжүүлнэ.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>3.4</div>
+              <div style="padding-left: 10px">
+                Зуучлуулагч нь Зуучлагчийн оролцоогүйгээр хөлслөгчтэй гэрээ
+                байгуулсан тохиолдолд Зуучлагчийн үйлчилгээ үзүүлсэн зардалд
+                дараахыг төлнө:
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div style="padding-left: 30px">i.</div>
+              <div style="padding-left: 10px">
+                Гэрээ байгуулснаас хойш 1 сарын дотор бол 100,000 (нэг зуун
+                мянга) төгрөг;
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div style="padding-left: 30px">ii.</div>
+              <div style="padding-left: 10px">
+                Гэрээ байгуулснаас хойш 1 ба түүнээс дээш сарын хугацаа өнгөрсөн
+                бол Зуучлалын хөлсийн 50 хувийг;
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4 style="padding-left: 25px; padding-top: 10pt">
+              Дөрөв. Менежментийн үйлчилгээ, төлбөр
+            </h4>
+            <div style="display: flex">
+              <div>4.1</div>
+              <div style="padding-left: 10px">
+                Зуучлагч нь орон сууцны нөхцөл байдалд үнэлэлт өгч баримтжуулах,
+                орон сууцанд дагалдах эд хөрөнгийг бүртгэлжүүлэх, барьцаа төлбөр
+                саатуулан барих, эд хөрөнгөд эвдрэл гэмтэл үүссэн бол барьцаа
+                төлбөрөөс суутгал хийх, барьцааны үнийн дүнгээс давсан хохирлыг
+                Хөлслөгчөөс шаардах зэрэг үйлчилгээг үзүүлнэ.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>4.2</div>
+              <div style="padding-left: 10px">
+                Зуучлагч нь зуучлалын үйлчилгээ үзүүлсэн тохиолдолд менежментийн
+                үйлчилгээний төлбөр нь Орон сууц хөлслөх гэрээ байгуулсан эхний
+                зургаан сард 0 төгрөг байх бөгөөд 7 дахь сараас эхлэн хагас жил
+                бүр орон сууц хөлслөх гэрээний хагас сарын түрээсийн төлбөртэй
+                тэнцүү байна.
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- RIGHT SIDE -->
+        <div style="width: 50%; margin-left: 15px">
+          <section>
+            <div style="display: flex; margin-top: 0pt">
+              <div>4.3</div>
+              <div style="padding-left: 10px">
+                Зуучлуулагч нь зуучлалын үйлчилгээнд хамрагдаагүй тохиолдолд
+                менежментийн үйлчилгээний төлбөр нь 6 сар тутам Орон сууц
+                хөлслөх гэрээний хагас сарын түрээсийн төлбөртэй тэнцүү байна.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>4.4</div>
+              <div style="padding-left: 10px">
+                Менежментийн үйлчилгээний төлбөрийг факторингийн үйлчилгээний
+                дагуу ББСБ нь Зуучлуулагчид төлөх факторингийн (түрээсийн 6
+                сарын) төлбөрөөс суутган шилжүүлнэ.
+              </div>
+            </div>
+            <h4 style="padding-left: 25px">Тав. Зуучлуулагчийн оролцоо</h4>
+            <div
+              style="padding-left: 25px; padding-top: 0px; padding-bottom: 10pt"
+            >
+              Зуучлуулагч нь дараах эрх, үүрэгтэй:
+            </div>
+            <div style="display: flex">
+              <div>5.1</div>
+              <div style="padding-left: 10px">
+                Хүн амьдран суух боломжтой, ус, цахилгаан, шугам сүлжээ зэрэг
+                техникийн болон ариун цэврийн (шавж, халдваргүйжүүлэлт зэрэг)
+                шаардлага хангасан, оршин суугчийн тав тухт байдлыг хангахуйц
+                орон сууцыг зуучлуулах;
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>5.2</div>
+              <div style="padding-left: 10px">
+                РэнтПэй платформд оруулсан орон сууц хөлслүүлэх зар,
+                менежментийн үйлчилгээтэй холбоотой санал хүсэлт гаргах;
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>5.3</div>
+              <div style="padding-left: 10px">
+                Зуучлагчид үнэн зөв мэдээлэл, баримт бичиг гаргаж өгөх, худал
+                мэдээллээс үүдэн гарах аливаа эрсдэл, хохирлыг бүрэн хариуцах;
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>5.4</div>
+              <div style="padding-left: 10px">
+                Зуучлагчтай байнгын харилцаа холбоотой байх;
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>5.5</div>
+              <div style="padding-left: 10px">
+                Хамтын ажиллагааны явцад олж мэдсэн Зуучлагчийн дотоод
+                мэдээллийг бусдад задруулахгүй байх;
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4 style="padding-left: 25px">Зургаа. Зуучлагчийн оролцоо</h4>
+            <div style="display: flex">
+              <div>6.1</div>
+              <div style="padding-left: 10px">
+                Зуучлуулагч нь итгэмжлэгдсэн этгээд байгаа бол түүний хууль ёсны
+                итгэмжлэл болон бусад шаардлагатай баримт бичгийг гаргуулан
+                авах;
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>6.2</div>
+              <div style="padding-left: 10px">
+                РэнтПэй платформын мэдээллийн санд төвлөрсөн хэрэглэгчдийн
+                мэдээллийг ашиглан зар сурталчилгаа, маркетингийн үйл ажиллагаа
+                явуулах;
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>6.3</div>
+              <div style="padding-left: 10px">
+                Шаардлагатай тохиолдолд цахим хуудаст байршуулсан зуучлуулагчтай
+                холбогдох бүх мэдээллийг идэвхгүй болгох, устгах;
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>6.4</div>
+              <div style="padding-left: 10px">
+                Зуучлуулагчид үйлчилгээний явцын талаар мэдээллэх;
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>6.5</div>
+              <div style="padding-left: 10px">
+                РэнтПэй платформын хэвийн ажиллагааг хангаж ажиллах, алдаа
+                зөрчлийг хурдан шуурхай засан сайжруулах;
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="zFooter" style="bottom: 2mm">
+        <div>Зуучлагчийг төлөөлж:________________</div>
+        <div>2</div>
+        <div>Зуучлуулагчийг төлөөлж:________________</div>
+      </div>
+    </div>
+    <!-- PAGE 3 -->
+    <div class="zC myDiv">
+      <div>
+        <img alt="" class="zImg" />
+      </div>
+      <div style="display: flex">
+        <!-- LEFT SIDE -->
+        <div style="width: 50%; margin-right: 15px">
+          <section>
+            <div style="display: flex; margin-top: 0pt">
+              <div>6.6</div>
+              <div style="padding-left: 10px">
+                Зуучлагчийн хувийн мэдээллийн нууцлалыг хадгалах;
+              </div>
+            </div>
+            <h4 style="padding-left: 25px">Долоо. Талуудын хариуцлага</h4>
+            <div style="display: flex">
+              <div>7.1</div>
+              <div style="padding-left: 10px">
+                Талууд Гэрээгээр хүлээсэн үүргээ зөрчсөнөөс нөгөө талдаа хохирол
+                учруулсан бол буруутай Тал хохирлыг нөхөн төлнө.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 0pt">
+              <div>7.2</div>
+              <div style="padding-left: 10px">
+                Зуучлуулагч нь Зуучлагчийн холбож өгсөн хөлслөгчтэй үгсэн
+                тохиролцож Зуучлагчийг хууран мэхэлж, зуучлалын хөлс төлөхөөс
+                татгалзсан болох нь тогтоогдсон бол Зуучлагч нь зуучлуулагчаас
+                өөрт учирсан хохирлоо шаардан төлүүлнэ.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>7.3</div>
+              <div style="padding-left: 10px">
+                Зуучлагчаас хамааралгүй шалтгаанаар Зуучлуулагч болон орон сууц
+                Хөлслөгч нарын хооронд аливаа маргаан үүссэн, хохирол учирсан
+                бол зуучлагч хариуцлага хүлээхгүй.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>7.4</div>
+              <div style="padding-left: 10px">
+                Зуучлуулагч нь энэхүү гэрээний 5.1-т заасан шаардлагыг хангаагүй
+                орон сууцыг Зуучлагчийн мэдэгдлийн дагуу өөрийн зардлаар нэн
+                даруй засварлах, доголдлыг арилгах үүрэгтэй.
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4 style="padding-left: 25px; padding-top: 10pt">
+              Найм. Гэрээ цуцлах, дуусгавар болох
+            </h4>
+            <div style="display: flex; margin-top: 10px">
+              <div>8.1</div>
+              <div style="padding-left: 10px">
+                Талууд харилцан тохиролцсоноор, эсхүл Зуучлуулагч болон Хөлслөгч
+                хоорондын байгуулсан “Орон сууц хөлслөх гэрээ” дуусгавар болсон,
+                эсхүл Гэрээний үүргийн ноцтой зөрчил (<em
+                  >өөр зуучлагчийг оролцуулсан, Зуучлагчийг хууран мэхэлж гэрээ
+                  хэлцэл байгуулсан, Зуучлуулагч санаатайгаар худал мэдээлэл
+                  өгсөн, хуурамчаар баримт бичиг үйлдсэний улмаас бусдад хохирол
+                  учирсан, шаардлага хангаагүй орон сууц хүлээлгэн өгсөн, орон
+                  сууцны доголдлыг арилгаагүй, Хөлслөгчтэй үгсэн тохиролцож
+                  Зуучлагчид мэдэгдэлгүйгээр гэрээ байгуулсан</em
+                >) гаргасан бол Талууд энэхүү Гэрээг дуусгавар болгоно.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>8.2</div>
+              <div style="padding-left: 10px">
+                Талууд энэ Гэрээний 8.1-д зааснаас бусад тохиолдолд Гэрээний
+                хугацаанаас өмнө энэ Гэрээг аль нэг талын санаачилгаар цуцлах
+                эрхгүй байна.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>8.3</div>
+              <div style="padding-left: 10px">
+                Гэрээг цуцалсан нь зуучлалын хөлсийг буцаан олгох үндэслэл
+                болохгүй.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>8.4</div>
+              <div style="padding-left: 10px">
+                Талууд гэрээг цуцалсан бол Зуучлагч нь олж авсан зар-мэдээллийг
+                платформоос устгах, Зуучлуулагч нь гэрээний хугацаанд тохирсон
+                төлбөрийг төлж хамтын ажиллагааг хаана.
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- RIGHT SIDE -->
+        <div style="width: 50%; margin-left: 15px">
+          <section>
+            <h4 style="padding-left: 25px; padding-top: 0pt">
+              Ес. Гэнэтийн болон давагдашгүй хүчин зүйл
+            </h4>
+            <div style="display: flex; padding-top: 8px">
+              <div>9.1</div>
+              <div style="padding-left: 10px">
+                Зуучлуулагчийн сервер байрлаж байгаа газрын интернетийн
+                үйлчилгээ тасалдах, эсхүл тухайн газар цахилгааны эрчим хүчний
+                хязгаарлалт тогтоосон, эрх бүхий байгууллагын шийдвэр хорио
+                хязгаар зэрэг талуудын хяналтаас давсан нөхцөл байдлыг
+                давагдашгүй хүчин зүйл гэж үзнэ.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 0pt">
+              <div>9.2</div>
+              <div style="padding-left: 10px">
+                Гэнэтийн болон давагдашгүй хүчин зүйлийн нөлөөнд өртөж, гэрээний
+                үүргээ гүйцэтгэх боломжгүй болсон тал энэ тухай ажлын 3 өдрийн
+                дотор гэрээний нөгөө талд мэдэгдэх үүрэгтэй.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>9.3</div>
+              <div style="padding-left: 10px">
+                Гэнэтийн болон давагдашгүй нөхцөл байдал үүссэнээс болж
+                гэрээгээр хүлээсэн үүргээ биелүүлэх боломжгүй болсон тал
+                зөрчлийг арилгах бүхий л арга хэмжээг авсан тохиолдолд
+                хариуцлагаас чөлөөлөгдөнө.
+              </div>
+            </div>
+            <h4 style="padding-left: 25px">Арав. Маргаан шийдвэрлэх</h4>
+          </section>
+          <section>
+            <div style="display: flex">
+              <div>10.1</div>
+              <div style="padding-left: 10px">
+                Энэхүү Гэрээнд шууд заагаагүй аливаа асуудлыг Монгол Улсад хүчин
+                төгөлдөр мөрдөгдөж буй хууль тогтоомжийн дагуу зохицуулна.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>10.2</div>
+              <div style="padding-left: 10px">
+                Гэрээтэй холбоотой үүссэн аливаа маргааныг эвийн журмаар
+                шийдвэрлэхийг эрмэлзэх бөгөөд зөвшилцөлд хүрээгүй тохиолдолд
+                Монгол Улсын шүүхээр шийдвэрлүүлнэ.
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4 style="padding-left: 25px">Арван нэг. Бусад</h4>
+            <div style="display: flex">
+              <div>11.1</div>
+              <div style="padding-left: 10px">
+                Энэхүү Гэрээний аль нэг заалт хүчин төгөлдөр бус болсон
+                тохиолдолд гэрээний бусад заалтын хүчин төгөлдөр байдалд
+                нөлөөлөхгүй.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>11.2</div>
+              <div style="padding-left: 10px">
+                Энэхүү Гэрээг Монгол хэл дээр тус бүр 2 (хоёр) хувь үйлдэх
+                бөгөөд Талууд тус бүр 1 (нэг) хувийг хадгална.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>11.3</div>
+              <div style="padding-left: 10px">
+                Гэрээнд нэмэлт өөрчлөлт оруулахдаа Талууд зөвхөн харилцан
+                тохиролцож, бичгээр үйлдэн гарын үсэг зурж баталгаажуулснаар
+                хүчин төгөлдөр болно. Нэмэлт өөрчлөлт нь гэрээний салшгүй хэсэг
+                байна.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>11.4</div>
+              <div style="padding-left: 10px">
+                Гэрээнд талууд эсхүл тэдгээрийн хууль ёсны төлөөлөгчид гарын
+                үсэг зурж баталгаажуулснаар хүчин төгөлдөр болно.
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="zFooter" style="bottom: -2mm">
+        <div>Зуучлагчийг төлөөлж:________________</div>
+        <div>3</div>
+        <div>Зуучлуулагчийг төлөөлж:________________</div>
+      </div>
+    </div>
+    <!-- PAGE 4 -->
+    <div class="zC myDiv">
+      <div><img alt="" class="zImg" /></div>
+      <!-- LEFT SIDE -->
+      <div style="display: flex">
+        <div style="width: 50%; margin-right: 15px">
+          <section>
+            <h4
+              style="text-align: center; padding: 12px 0px; padding-top: 20px"
+            >
+              БАТАЛГААЖУУЛСАН:
+            </h4>
+            <div style="font-weight: bold">Зуучлагчийг төлөөлж:</div>
+            <div style="font-weight: bold; padding: 2px 0px">
+              РэнтПэй сольюшн ХХК<br />Үйл ажиллагаа эрхэлсэн захирал<br />
+              Б.Мөнхбат
+            </div>
+            <div style="padding: 12px 0px">
+              ГАРЫН ҮСЭГ: ...............................
+            </div>
+            <div style="font-weight: bold">Харилцааны зөвлөх менежер:</div>
+            <div>
+              <div style="padding: 2px 0px; font-weight: bold">{{agent}}</div>
+            </div>
+            <div>Утас: {{agentNumber}}</div>
+            <div style="padding: 12px 0px">
+              ГАРЫН ҮСЭГ: ...............................
+            </div>
+            <div style="padding: 2px 0px">{{{office}}}</div>
+          </section>
+        </div>
+        <!-- RIGHT SIDE -->
+        <div style="width: 50%; margin-left: 15px">
+          <section>
+            <div style="font-weight: bold; margin-top: 45px">
+              Хөлслүүлэгчийг төлөөлж:
+            </div>
+            <div style="padding: 6px 0px; text-align: left">
+              <span>{{tureesluulegchLast}}</span> овогтой
+              <span>{{tureesluulegchFirst}}</span>
+            </div>
+            <div>Утас: <span>{{tureesluulegchNum}}</span></div>
+            <div style="padding: 12px 0px">
+              ГАРЫН ҮСЭГ: ...............................
+            </div>
+            <div style="font-weight: bold">Хамтран өмчлөгч:</div>
+            <div style="padding: 6px 0px">
+              <span>________________</span> овогтой
+              <span>________________</span>
+            </div>
+            <div>Утас: <span>________________</span></div>
+            <div style="padding: 12px 0px">
+              ГАРЫН ҮСЭГ: ...............................
+            </div>
+          </section>
+        </div>
+        <div class="zFooter" style="bottom: -15.5cm">
+          <div>Зуучлагчийг төлөөлж:________________</div>
+          <div>4</div>
+          <div>Зуучлуулагчийг төлөөлж:________________</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
