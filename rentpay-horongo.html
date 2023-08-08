@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style type="text/css">
+      body {
+        font-family: Arial;
+        font-size: 10pt;
+        line-height: 1.25;
+      }
+      img {
+        width: 135px;
+        height: 33px;
+        content: url("https://chatbot.mn/uploads/image/20221020/e445f872a508927e0784968d8fa08fa3.png");
+      }
+      h4 {
+        margin: 0px;
+        padding: 8px;
+      }
+      p {
+        margin: 0px;
+        padding-bottom: 10px;
+      }
+      section {
+        text-align: justify;
+      }
+      span {
+        font-weight: bold;
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+      table td {
+        border: 1px solid black;
+      }
+      tr td:nth-child(1) {
+        padding: 6px;
+        width: 3%;
+      }
+      tr td:nth-child(2) {
+        padding: 0 6px;
+        width: 45%;
+      }
+      tr td:nth-child(3) {
+        padding: 0 6px;
+      }
+
+      @media print {
+        .myDiv {
+          break-inside: avoid;
+          position: relative;
+        }
+      }
+
+      .zC {
+        padding-top: 2.52cm;
+        padding-bottom: 2.22cm;
+        padding-left: 2.27cm;
+        padding-right: 1.9cm;
+      }
+      .zImg {
+        position: absolute;
+        top: 1.5cm;
+        left: 2cm;
+        z-index: 100;
+      }
+      .zFooter {
+        position: absolute;
+        bottom: 1.5cm;
+        left: 2cm;
+        display: flex;
+        justify-content: space-between;
+        width: 82%;
+      }
+      .oC {
+        padding: 1.5cm;
+      }
+      .fC {
+        padding: 2.54cm 2cm;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Зуучлах гэрээ эхлэл -->
+    <!-- PAGE 1 -->
+    <div class="zC">
+      <div>
+        <img alt="" class="zImg" />
+      </div>
+      <div>
+        <h4 style="text-align: center; padding-bottom: 12pt">
+          ХӨРӨНГӨ ИТГЭМЖЛЭН УДИРДАХ ГЭРЭЭ
+          <br />/менежментийн үйлчилгээтэй/
+        </h4>
+        <div
+          style="
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 10px;
+          "
+        >
+          <div>
+            <span>{{cDateY}}</span> оны <span>{{cDateM}}</span> сарын
+            <span>{{cDateD}}</span>-ны өдөр
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;№
+            И/{{contractNumber}}
+          </div>
+          <div style="font-weight: bold">Улаанбаатар хот</div>
+        </div>
+      </div>
+      <div style="display: flex">
+        <!-- LEFT SIDE -->
+        <div style="width: 50%; margin-right: 15px">
+          <section>
+            <div style="display: flex">
+              <div>
+                Нэг талаас: 6730043 регистрийн дугаартай “РЭНТПЭЙ СОЛЬЮШН” ХХК,
+                түүнийг төлөөлж Үйл ажиллагаа эрхэлсэн захирал Б.Мөнхбат,
+                (цаашид “<span>Хөрөнгө удирдагч</span>” гэх)
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>
+                Нөгөө талаас: {{customerRD}} регистрийн дугаартай
+                {{customerAddress}} тоот хаягт байрлах, {{customerLast}} овогтой
+                {{customerFirst}} (цаашид “<span>Үйлчлүүлэгч</span>”, хамтад нь
+                “<span>Талууд</span>” гэх) нар нь Иргэний хуулийн 339-405 дугаар
+                зүйл болон холбогдох бусад хэсгийг үндэслэл болгон дараах
+                нөхцөлөөр харилцан тохиролцож энэхүү Хөрөнгө итгэмжлэн удирдах
+                гэрээ (цаашид “<span>Гэрээ</span>” гэх)-г байгуулав.
+              </div>
+            </div>
+            <h4 style="padding: 12pt 0px; padding-left: 0px">
+              Нэг. Нийтлэг үндэслэл
+            </h4>
+            <div style="display: flex">
+              <div>1.1</div>
+              <div style="padding-left: 10px">
+                <span>Гэрээний зорилго:</span> Энэхүү гэрээгээр Хөрөнгө удирдагч
+                нь РэнтПэй платформоор дамжуулан эсхүл өөрийн итгэмжлэгдсэн
+                агентын тусламжтайгаар Үйлчлүүлэгчийн үл хөдлөх хөрөнгө
+                түрээслэх харилцаанд Үйлчлүүлэгчийн нэрийн өмнөөс оролцох буюу
+                гэрээнд заасан хөрөнгө удирдах үйлчилгээ үзүүлэх, Үйлчлүүлэгч нь
+                энэхүү гэрээгээр тохиролцсон төлбөр төлөхтэй холбогдсон
+                харилцааг зохицуулна.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>1.2</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдагч нь энэхүү гэрээний хүрээнд дараах үл хөдлөх
+                хөрөнгө (цаашид “<span>Хөрөнгө</span>” гэх)-д хөрөнгө удирдах
+                үйлчилгээ үзүүлнэ.
+              </div>
+            </div>
+            <table style="margin-top: 12pt">
+              <tr>
+                <td>№</td>
+                <td>Гэрчилгээний дугаар</td>
+                <td>Хаяг, тоот, м.кв</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>{{realStateNum}}</td>
+                <td>{{address}}, {{mkv}} мкв</td>
+              </tr>
+            </table>
+            <h4 style="padding: 12pt 0px; padding-left: 0px">
+              Хоёр. Мэдэгдэл, баталгаа
+            </h4>
+            <div style="display: flex">
+              <div>2.1</div>
+              <div style="padding-left: 10px">
+                Үйлчлүүлэгч нь энэхүү гэрээгээр дараах мэдэгдэл, баталгааг
+                гаргаж байна:
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                Хөрөнгийг түрээслэх харилцаанд Түрээслүүлэгчийн нэрийн өмнөөс
+                оролцох, төлөөлөх бүрэн эрхийг Хөрөнгө удирдагчид олгосон болно.
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- RIGHT SIDE -->
+        <div style="width: 50%; margin-left: 15px">
+          <section>
+            <div style="display: flex">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                Хөрөнгийн бусад хамтран өмчлөгчдөөс Хөрөнгө түрээслэх талаар
+                урьдчилан зөвшөөрөл авсан болно.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                Хөрөнгөтэй холбоотой гуравдагч этгээд аливаа шаардлага гаргах
+                нөхцөл бүрдээгүй.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                Энэхүү гэрээг хуурамч нөхцөл байдлыг бүрдүүлж, залилан мэхлэх
+                зорилгоор байгуулаагүй.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдагчийн зөвшөөрөлгүйгээр түүнтэй төсөөтэй үйл
+                ажиллагаа явуулж буй этгээдээс давхар үйлчилгээ авахгүй.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>-</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдах үйлчилгээний дагуу байгуулагдах гэрээ (Орон сууц
+                хөлслөх, факторингийн үйлчилгээ үзүүлэх, өр төлбөр барагдуулах,
+                түрээсийн гэрээ зэрэг)-ний нөхцөлүүдтэй бүрэн танилцсан, тус
+                гэрээгээр хүлээх эрх, үүрэг, хариуцлагыг зөвшөөрч байгаа болно.
+              </div>
+            </div>
+          </section>
+          <section>
+            <div style="display: flex; margin-top: 12pt">
+              <div>2.2</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдагч нь Үйлчлүүлэгчийн хууль ёсны эрх, ашиг
+                сонирхлын эсрэг үйл ажиллагаа явуулахгүй талаар баталгаа гаргаж
+                байна.
+              </div>
+            </div>
+            <h4 style="padding: 12pt 0px; padding-left: 0px">
+              Гурав. Хөрөнгө итгэмжлэн удирдах үйлчилгээ
+            </h4>
+            <div style="display: flex">
+              <div>3.1</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдагч нь РэнтПэй платформоор дамжуулан эсхүл өөрийн
+                итгэмжлэгдсэн агентын тусламжтайгаар Үйлчлүүлэгчийн нэрийн
+                өмнөөс дараах үйл ажиллагаа (цаашид “<span
+                  >Хөрөнгө удирдах үйлчилгээ</span
+                >” гэх) явуулахаар Талууд тохиролцов.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div style="padding-left: 30px">3.1.1</div>
+              <div style="padding-left: 10px">
+                Түрээсийн болон орон сууц хөлслөх гэрээ байгуулах;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">3.1.2</div>
+              <div style="padding-left: 10px">
+                Факторингийн үйлчилгээ үзүүлэх гэрээ байгуулах;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">3.1.3</div>
+              <div style="padding-left: 10px">
+                Платформд түрээсийн зар оруулах, Түрээслэгчтэй уулзалт зохион
+                байгуулах;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">3.1.4</div>
+              <div style="padding-left: 10px">
+                Хөрөнгийн нөхцөл байдлыг баримтжуулах;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">3.1.5</div>
+              <div style="padding-left: 10px">
+                Хөрөнгийн дагалдах эд хөрөнгийг бүртгэлжүүлэх, даатгуулах;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">3.1.6</div>
+              <div style="padding-left: 10px">
+                Хөрөнгийн ашиглалтад хяналт тавих;
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="zFooter">
+        <div></div>
+        <div>1</div>
+        <div></div>
+      </div>
+    </div>
+    <!-- PAGE 2 -->
+    <div class="zC myDiv">
+      <div><img alt="" class="zImg" /></div>
+      <!-- LEFT SIDE -->
+      <div style="display: flex">
+        <div style="width: 50%; margin-right: 15px">
+          <section>
+            <div style="display: flex">
+              <div style="padding-left: 30px">3.1.7</div>
+              <div style="padding-left: 10px">
+                Түрээслэгчид Хөрөнгийг хүлээлгэн өгөх, буцаан хүлээн авах;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">3.1.8</div>
+              <div style="padding-left: 10px">
+                Түрээсийн төлбөр цуглуулах буюу факторингийн төлбөрийг
+                Үйлчлүүлэгчид шилжүүлэх;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">3.1.9</div>
+              <div style="padding-left: 10px">
+                Барьцаа төлбөр саатуулан барих;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">3.1.10</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө болон түүний эд хөрөнгөд эвдрэл гэмтэл үүссэн бол
+                барьцаа төлбөрөөс суутгал хийх, барьцааны үнийн дүнгээс давсан
+                хохирлыг Түрээслэгчээс шаардах;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">3.1.11</div>
+              <div style="padding-left: 10px">
+                Түрээслэгчийн үүргийн зөрчилтэй холбоотой маргаанд шүүхэд
+                хандах, эрх бүхий байгууллагад гомдол, мэдээлэл гаргах (энэ
+                тохиолдолд Үйлчлүүлэгчээс Иргэний хуульд заасан итгэмжлэл авна);
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>3.2</div>
+              <div style="padding-left: 10px">
+                Үйлчлүүлэгч нь Түрээсийн гэрээг дараах нөхцөлөөр байгуулахыг
+                Хөрөнгө удирдагчид даалгав.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div style="padding-left: 30px">a.</div>
+              <div style="padding-left: 10px">
+                Хөрөнгийн нэг сарын түрээсийн төлбөр (цаашид “<span
+                  >Түрээсийн төлбөр</span
+                >” гэх)-ийн хэмжээ: {{payment}} төгрөг
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">b.</div>
+              <div style="padding-left: 10px">Түрээсийн гэрээний хугацаа:</div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>3.3</div>
+              <div style="padding-left: 10px">
+                Үйлчлүүлэгч нь Хөрөнгө удирдагчид мэйлээр мэдэгдсэнээр эсхүл
+                Рэнтпэй платформ дах харгалзах мэдээллийг өөрчилснөөр Хөрөнгийн
+                түрээсийн төлбөрийг өөрчилсөнд тооцно.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>3.4</div>
+              <div style="padding-left: 10px">
+                Үйлчлүүлэгч нь Факторингийн гэрээг дараах нөхцөлөөр байгуулахыг
+                Хөрөнгө удирдагчид даалгав.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div style="padding-left: 30px">a.</div>
+              <div style="padding-left: 10px">
+                {{rentMonth}} сарын түрээсийн төлбөртэй тэнцэх хэмжээний
+                факторингийн төлбөр авах;
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>3.5</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдагч нь Хөрөнгийг захиран зарцуулах эрхгүй болно.
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4 style="padding-left: 0px; padding-top: 12pt">
+              Дөрөв. Гэрээний төлбөр, төлбөр төлөх нөхцөл
+            </h4>
+            <div style="display: flex; padding-top: 10pt">
+              <div>4.1</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдах үйлчилгээний 1 сарын төлбөр нь
+                {{servicePayment}} төгрөг байна. Энэхүү үнийн дүнд НӨАТ багтсан
+                болно.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>4.2</div>
+              <div style="padding-left: 10px">
+                Гэрээний 4.1-т заасан төлбөрийг факторингийн үйлчилгээний
+                төлбөрөөс суутгуулан шилжүүлэхээр Талууд тохиролцов.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>4.3</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдагч нь Үйлчлүүлэгчийн дараах дансанд Факторингийн
+                төлбөрийг шилжүүлнэ. <br />Банк: {{bankName}}<br />Дансны дугаар: {{accountNum}}<br />Данс
+                эзэмшигч: {{accountName}}
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- RIGHT SIDE -->
+        <div style="width: 50%; margin-left: 15px">
+          <section>
+            <div style="display: flex">
+              <div>4.4</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдагч нь Түрээслэгчийн эсрэг шүүхэд нэхэмжлэл гаргах,
+                эрх бүхий байгууллагад хандах зэрэг үүргийн зөрчлийн эсрэг үйл
+                ажиллагаа явуулах, маргаанд оролцох тохиолдолд түүнтэй холбоотой
+                гарсан зардлыг Үйлчлүүлэгч хариуцна.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>4.5</div>
+              <div style="padding-left: 10px">
+                Гэрээний 4.4-т заасан зардлыг Хөрөнгө удирдагч нь баримтаар
+                нотлох үүрэгтэй.
+              </div>
+            </div>
+            <h4 style="padding-left: 0px; padding-top: 10pt">
+              Тав. Үйлчлүүлэгчийн оролцоо
+            </h4>
+            <div style="display: flex">
+              <div>5.1</div>
+              <div style="padding-left: 10px">
+                Үйлчлүүлэгч нь дараах эрх, үүрэгтэй.
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">a.</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдах үйлчилгээтэй холбоотой санал хүсэлт гаргах;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">b.</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдагчид үнэн зөв мэдээлэл, баримт бичиг гаргаж өгөх,
+                худал мэдээллээс үүдэн гарах аливаа эрсдэл, хохирлыг бүрэн
+                хариуцах;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">c.</div>
+              <div style="padding-left: 10px">
+                Хамтын ажиллагааны явцад олж мэдсэн Хөрөнгө удирдагчийн дотоод
+                мэдээллийг бусдад задруулахгүй байх;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">d.</div>
+              <div style="padding-left: 10px">
+                Үйлчилгээний нөхцөл, нууцлалын бодлогыг дагаж мөрдөх.
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4 style="padding-left: 0px">
+              Зургаа. Хөрөнгө удирдагчийн оролцоо
+            </h4>
+            <div style="display: flex">
+              <div>6.1</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдагч нь дараах эрх, үүрэгтэй.
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">a.</div>
+              <div style="padding-left: 10px">
+                Түрээсийн харилцаанд Үйлчлүүлэгчийн нэрийн өмнөөс, түүний эрх,
+                ашиг сонирхлыг төлөөлж оролцох;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">b.</div>
+              <div style="padding-left: 10px">
+                Үйлчлүүлэгч нь итгэмжлэгдсэн этгээд байгаа бол түүний хууль ёсны
+                итгэмжлэл болон бусад шаардлагатай баримт бичгийг гаргуулан
+                авах;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">c.</div>
+              <div style="padding-left: 10px">
+                РэнтПэй платформын мэдээллийн санд төвлөрсөн хэрэглэгчдийн
+                мэдээллийг ашиглан зар сурталчилгаа, маркетингийн үйл ажиллагаа
+                явуулах;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">d.</div>
+              <div style="padding-left: 10px">
+                Шаардлагатай тохиолдолд платформд байршуулсан Үйлчлүүлэгчтэй
+                холбогдох бүх мэдээллийг идэвхгүй болгох, устгах;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">e.</div>
+              <div style="padding-left: 10px">
+                Үйлчлүүлэгчийн хүсэлтээр үйлчилгээний явцын талаарх ажлын
+                тайланг мэдээллэх;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">f.</div>
+              <div style="padding-left: 10px">
+                Үйлчлүүлэгчийн хувийн мэдээллийн нууцлалыг хадгалах.
+              </div>
+            </div>
+            <h4 style="padding-left: 0px; padding-top: 12pt">
+              Долоо. Талуудын хариуцлага
+            </h4>
+            <div style="display: flex; margin-top: 10px">
+              <div>7.1</div>
+              <div style="padding-left: 10px">
+                Талууд Гэрээгээр хүлээсэн үүргээ зөрчсөнөөс нөгөө талдаа хохирол
+                учруулсан бол буруутай Тал хохирлыг нөхөн төлнө.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 10pt">
+              <div>7.2</div>
+              <div style="padding-left: 10px">
+                Үйлчлүүлэгч нь энэхүү гэрээний 2.1 дүгээр зүйлд заасан баталгааг
+                зөрчсөн бол Хөрөнгө удирдагчаас гарсан зардал, хохирлыг төлөх ба
+                хүлээн авсан факторингийн төлбөрийг бүрэн хэмжээгээр Хөрөнгө
+                удирдагчид буцаан шилжүүлнэ.
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="zFooter" style="bottom: 1.5cm">
+        <div></div>
+        <div>2</div>
+        <div></div>
+      </div>
+    </div>
+    <!-- PAGE 3 -->
+    <div class="zC myDiv">
+      <div>
+        <img alt="" class="zImg" />
+      </div>
+      <div style="display: flex">
+        <!-- LEFT SIDE -->
+        <div style="width: 50%; margin-right: 15px">
+          <section>
+            <div style="display: flex">
+              <div>7.3</div>
+              <div style="padding-left: 10px">
+                Түрээслэгчийн түрээсийн гэрээгээр хүлээсэн үүргийн зөрчилтэй
+                холбоотой аливаа хариуцлагыг Хөрөнгө удирдагч хүлээхгүй болно.
+              </div>
+            </div>
+            <h4 style="padding-left: 0px; padding-top: 10pt">
+              Найм. Гэрээ цуцлах, дуусгавар болох
+            </h4>
+            <div style="display: flex; padding-top: 8px">
+              <div>8.1</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдагч нь дараах тохиолдолд гэрээг нэг талын
+                санаачилгаар цуцлах эрхтэй:
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div style="padding-left: 30px">a.</div>
+              <div style="padding-left: 10px">
+                Хөрөнгө удирдагчийг хууран мэхэлж гэрээ хэлцэл байгуулсан;
+              </div>
+            </div>
+            <div style="display: flex">
+              <div style="padding-left: 30px">b.</div>
+              <div style="padding-left: 10px">
+                Үйлчлүүлэгч санаатайгаар худал мэдээлэл өгсөн, хуурамчаар баримт
+                бичиг үйлдсэний улмаас бусдад хохирол учруулсан.
+              </div>
+            </div>
+            <div style="display: flex; padding-top: 8px">
+              <div>8.2</div>
+              <div style="padding-left: 10px">
+                Гэрээний 8.1-т заасан үндэслэлээр Хөрөнгө удирдагч нь гэрээг нэг
+                талын санаачилгаар цуцалсан бол Үйлчлүүлэгч нь Гэрээний 7.2-т
+                заасан хариуцлага хүлээнэ.
+              </div>
+            </div>
+            <div style="display: flex; padding-top: 8px">
+              <div>8.3</div>
+              <div style="padding-left: 10px">
+                Талууд Гэрээний 8.1-т зааснаас бусад тохиолдолд Гэрээг
+                хугацаанаас өмнө цуцлах бол харилцан тохиролцож шийдвэрлэнэ.
+              </div>
+            </div>
+            <div style="display: flex; padding-top: 8px">
+              <div>8.4</div>
+              <div style="padding-left: 10px">
+                Талууд гэрээг цуцалсан бол Хөрөнгө удирдагч нь Үйлчлүүлэгчийн
+                мэдээллийг платформоос устгах, Үйлчлүүлэгч нь гэрээний хугацаанд
+                тохирсон төлбөрийг төлж хамтын ажиллагааг хаана.
+              </div>
+            </div>
+            <h4 style="padding-left: 0px; margin-top: 10pt">
+              Ес. Гэнэтийн болон давагдашгүй хүчин зүйл
+            </h4>
+            <div style="display: flex; padding-top: 8px">
+              <div>9.1</div>
+              <div style="padding-left: 10px">
+                Талууд урьдчилан таамаглах боломжгүй, тэдгээрийн хяналтаас
+                давсан нөхцөл байдлыг давагдашгүй хүчин зүйл гэж үзнэ.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>9.2</div>
+              <div style="padding-left: 10px">
+                Гэнэтийн болон давагдашгүй хүчин зүйлийн нөлөөнд өртөж, гэрээний
+                үүргээ гүйцэтгэх боломжгүй болсон тал энэ тухай ажлын 3 өдрийн
+                дотор гэрээний нөгөө талд мэдэгдэх үүрэгтэй.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>9.3</div>
+              <div style="padding-left: 10px">
+                Гэнэтийн болон давагдашгүй нөхцөл байдал үүссэнээс болж
+                гэрээгээр хүлээсэн үүргээ биелүүлэх боломжгүй болсон тал
+                зөрчлийг арилгах бүхий л арга хэмжээг авсан тохиолдолд
+                хариуцлагаас чөлөөлөгдөнө.
+              </div>
+            </div>
+            <h4 style="padding-left: 0px">Арав. Маргаан шийдвэрлэх</h4>
+            <div style="display: flex">
+              <div>10.1</div>
+              <div style="padding-left: 10px">
+                Энэхүү Гэрээнд шууд заагаагүй аливаа асуудлыг Монгол Улсад хүчин
+                төгөлдөр мөрдөгдөж буй хууль тогтоомжийн дагуу зохицуулна.
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- RIGHT SIDE -->
+        <div style="width: 50%; margin-left: 15px">
+          <section>
+            <div style="display: flex; margin-top: 0pt">
+              <div>10.2</div>
+              <div style="padding-left: 10px">
+                Гэрээтэй холбоотой үүссэн аливаа маргааныг эвийн журмаар
+                шийдвэрлэхийг эрмэлзэх бөгөөд зөвшилцөлд хүрээгүй тохиолдолд
+                Монгол Улсын шүүхээр шийдвэрлүүлнэ.
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4 style="padding-left: 0px">Арван нэг. Бусад</h4>
+            <div style="display: flex">
+              <div>11.1</div>
+              <div style="padding-left: 10px">
+                Энэхүү Гэрээний аль нэг заалт хүчин төгөлдөр бус болсон
+                тохиолдолд гэрээний бусад заалтын хүчин төгөлдөр байдалд
+                нөлөөлөхгүй.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>11.2</div>
+              <div style="padding-left: 10px">
+                Хөрөнгийн улсын бүртгэлийн гэрчилгээг энэхүү гэрээний Хавсралт
+                №1-т хавсаргав.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>11.3</div>
+              <div style="padding-left: 10px">
+                Энэхүү Гэрээг Монгол хэл дээр тус бүр 2 (хоёр) хувь үйлдэх
+                бөгөөд Талууд тус бүр 1 (нэг) хувийг хадгална.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>11.4</div>
+              <div style="padding-left: 10px">
+                Гэрээнд нэмэлт өөрчлөлт оруулахдаа Талууд зөвхөн харилцан
+                тохиролцож, бичгээр үйлдэн гарын үсэг зурж баталгаажуулснаар
+                хүчин төгөлдөр болно. Нэмэлт өөрчлөлт нь гэрээний салшгүй хэсэг
+                байна.
+              </div>
+            </div>
+            <div style="display: flex; margin-top: 12pt">
+              <div>11.5</div>
+              <div style="padding-left: 10px">
+                Гэрээнд талууд эсхүл тэдгээрийн хууль ёсны төлөөлөгчид гарын
+                үсэг зурж баталгаажуулснаар хүчин төгөлдөр болно.
+              </div>
+            </div>
+          </section>
+          <section>
+            <h4
+              style="text-align: center; padding: 12px 0px; padding-top: 20px"
+            >
+              БАТАЛГААЖУУЛСАН:
+            </h4>
+            <div style="font-weight: bold">Хөрөнгө удирдагчийг төлөөлж:</div>
+            <div style="font-weight: bold; padding: 6px 0px">
+              РэнтПэй сольюшн ХХК, РД: 6730043<br />
+            </div>
+            <div style="font-weight: bold; padding: 6px 0px">
+              Үйл ажиллагаа эрхэлсэн захирал <br />албан тушаалтай Б.Мөнхбат
+            </div>
+            <div style="padding: 12px 0px">
+              ГАРЫН ҮСЭГ: ...............................
+            </div>
+            <div style="font-weight: bold; padding: 6px 0px">
+              Зөвлөх менежер {{agent}}
+            </div>
+            <div style="font-weight: bold">
+              Утас: {{agentNumber}}
+            </div>
+            <div style="padding: 12px 0px">
+              ГАРЫН ҮСЭГ: ...............................
+            </div>
+            <div style="padding: 2px 0px">{{{office}}}</div>
+          </section>
+          <section>
+            <div style="font-weight: bold; padding: 6px 0px">Үйлчлүүлэгчийг төлөөлж:</div>
+            <div style="padding: 6px 0px; text-align: left">
+              <span>{{customerLast}}</span> овогтой
+              <span>{{customerFirst}}</span>
+            </div>
+            <div style="font-weight: bold">Утас: <span>{{customerNum}}</span></div>
+            <div style="padding: 12px 0px">
+              ГАРЫН ҮСЭГ: ...............................
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="zFooter" style="bottom: 5mm">
+        <div></div>
+        <div>3</div>
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>
